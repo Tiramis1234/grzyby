@@ -1,0 +1,29 @@
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* Ensures the whole site is white */
+}
+
+/* Fixes the NavLink active state for a light theme */
+.nav-link.active {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+/* Ensure the page stretches to full height */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+.transition-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
