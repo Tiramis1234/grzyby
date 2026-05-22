@@ -1,0 +1,82 @@
+@page "/login"
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Identity
+@using grzyby.Models
+@inject SignInManager<User> SignInManager
+@inject NavigationManager Navigation
+
+<PageTitle>Logowanie</PageTitle>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+                <h2 class="fw-bold text-center mb-4">Witaj ponownie</h2>
+
+                @if (!string.IsNullOrEmpty(ErrorMessage))
+                {
+                    <div class="alert alert-danger rounded-3">@ErrorMessage</div>
+                }
+
+                <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="loginForm">
+                    <AntiforgeryToken /> <!-- TO JEST KLUCZOWE -->
+                    <DataAnnotationsValidator />
+
+                    <div class="mb-3">
+                        <label class="form-label text-muted small">Adres E-mail</label>
+                        <InputText @bind-Value="Input.Email" class="form-control form-control-lg bg-light border-0" placeholder="Wpisz e-mail" />
+                        <ValidationMessage For="() => Input.Email" class="text-danger small mt-1" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label text-muted small">Hasło</label>
+                        <InputText @bind-Value="Input.Password" type="password" class="form-control form-control-lg bg-light border-0" placeholder="Wpisz hasło" />
+                        <ValidationMessage For="() => Input.Password" class="text-danger small mt-1" />
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-lg w-100 rounded-pill fw-bold">Zaloguj się</button>
+
+                    <div class="text-center mt-4 text-muted small">
+                        Nie masz konta? <a href="/register" class="text-dark fw-bold text-decoration-none">Zarejestruj się</a>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private LoginModel Input { get; set; } = default!;
+
+    private string? ErrorMessage;
+
+    protected override void OnInitialized()
+    {
+        Input ??= new LoginModel();
+    }
+
+    private async Task LoginUser()
+    {
+        var result = await SignInManager.PasswordSignInAsync(Input.Email, Input.Password, isPersistent: true, lockoutOnFailure: false);
+
+        if (result.Succeeded)
+        {
+            Navigation.NavigateTo("/", forceLoad: true);
+        }
+        else
+        {
+            ErrorMessage = "Nieprawidłowy e-mail lub hasło.";
+        }
+    }
+
+    public class LoginModel
+    {
+        [Required(ErrorMessage = "Email jest wymagany")]
+        [EmailAddress(ErrorMessage = "Zły format e-mail")]
+        public string Email { get; set; } = "";
+
+        [Required(ErrorMessage = "Hasło jest wymagane")]
+        public string Password { get; set; } = "";
+    }
+}

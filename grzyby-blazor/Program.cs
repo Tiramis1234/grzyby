@@ -1,50 +1,66 @@
-using grzyby.Components;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using grzyby.Data;
 using grzyby.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// 1. Dodanie obsługi komponentów Blazora
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+// 2. Konfiguracja bazy danych (Domyślnie SQLite)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") 
+        ?? "Data Source=grzyby.db"));
 
-builder.Services.AddIdentity<User, IdentityRole>(options =>
+// 3. Konfiguracja autoryzacji i stanu
+builder.Services.AddCascadingAuthenticationState();
+
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultScheme = IdentityConstants.ApplicationScheme;
+        options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+    })
+    .AddIdentityCookies();
+
+builder.Services.AddIdentityCore<User>(options =>
     {
         options.SignIn.RequireConfirmedAccount = false;
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 6;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
     })
     .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddSignInManager()
     .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.Migrate();
-}
-
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
-app.UseHttpsRedirection();
 
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+// 4. KOLEJNOŚĆ MIDDLEWARE (BARDZO WAŻNE!)
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseAntiforgery();
+app.UseAntiforgery(); // Musi być pod autoryzacją
 
-app.MapStaticAssets();
-app.MapRazorComponents<App>()
+// 5. Mapowanie komponentów
+app.MapRazorComponents<grzyby.Components.App>()
     .AddInteractiveServerRenderMode();
+
+// 6. Endpoint do wylogowywania
+app.MapPost("/logout", async (SignInManager<User> signInManager) =>
+{
+    await signInManager.SignOutAsync();
+    return Results.Redirect("/");
+});
 
 app.Run();

@@ -1,0 +1,87 @@
+@page "/forum/{Id:int}"
+@using grzyby.Data
+@using grzyby.Models
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext Db
+
+<PageTitle>@(wpis?.Tytul ?? "Wpis nie znaleziony")</PageTitle>
+
+<div class="container py-5">
+    @if (wpis == null)
+    {
+        <div class="text-center py-5">
+            <h3 class="text-muted">Nie znaleziono takiego wpisu.</h3>
+            <a href="/forum" class="btn btn-dark rounded-pill mt-3">Wróć do forum</a>
+        </div>
+    }
+    else
+    {
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Nawigacja -->
+                <div class="mb-4">
+                    <a href="/forum" class="text-muted text-decoration-none small">&laquo; Powrót do forum</a>
+                </div>
+                
+                <!-- Tytuł -->
+                <h1 class="fw-bold mb-3">@wpis.Tytul</h1>
+                
+                <!-- Informacje o autorze -->
+                <div class="d-flex align-items-center mb-4 text-muted small border-bottom pb-4">
+                    <div class="bg-light rounded-circle d-flex justify-content-center align-items-center fw-bold text-dark me-2" style="width: 40px; height: 40px;">
+                        @(string.IsNullOrEmpty(wpis.Author?.UserName) ? "?" : wpis.Author.UserName.Substring(0, 1).ToUpper())
+                    </div>
+                    <div>
+                        <strong class="text-dark d-block">@(wpis.Author?.UserName ?? "Usunięty użytkownik")</strong>
+                        @wpis.DataDodania.ToString("dd MMMM yyyy, HH:mm")
+                    </div>
+                </div>
+
+                <!-- Treść Wpisu -->
+                <div class="fs-5 lh-lg text-secondary mb-5" style="white-space: pre-wrap;">
+                    @wpis.Tresc
+                </div>
+
+                <!-- Sekcja Komentarzy -->
+                <div class="bg-light rounded-4 p-4 p-md-5 mt-5">
+                    <h4 class="fw-bold mb-4">Komentarze (@wpis.Komentarze.Count)</h4>
+                    
+                    @if (!wpis.Komentarze.Any())
+                    {
+                        <p class="text-muted mb-0">Nikt jeszcze nie skomentował tego wpisu.</p>
+                    }
+                    else
+                    {
+                        /* POPRAWIONA LITERÓWKA: "in" zamiast "w" */
+                        @foreach (var kom in wpis.Komentarze.OrderBy(k => k.DataDodania))
+                        {
+                            <div class="mb-3 border-bottom pb-3">
+                                <strong class="text-dark">@(kom.Author?.UserName ?? "Nieznany")</strong>
+                                <span class="text-muted small ms-2">@kom.DataDodania.ToString("dd.MM.yyyy HH:mm")</span>
+                                <p class="mt-2 mb-0 text-secondary">@kom.Tresc</p>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Wpis? wpis;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Pobieramy wpis wraz z danymi autora i powiązanymi komentarzami
+        wpis = await Db.Wpisy
+            .Include(w => w.Author)
+            .Include(w => w.Komentarze)
+                .ThenInclude(k => k.Author) // Dołączamy autorów komentarzy
+            .AsNoTracking()
+            .FirstOrDefaultAsync(w => w.Id == Id);
+    }
+}

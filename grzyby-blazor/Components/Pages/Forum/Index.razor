@@ -1,0 +1,81 @@
+@page "/forum"
+@using grzyby.Data
+@using grzyby.Models
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext Db
+
+<PageTitle>Forum Grzybiarzy</PageTitle>
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h1 class="display-5 fw-bold text-dark mb-0">Forum Grzybiarzy</h1>
+            <p class="text-muted mt-2">Dziel się swoimi znaleziskami i zadawaj pytania.</p>
+        </div>
+        <AuthorizeView>
+            <Authorized>
+                <a href="/forum/nowy" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">
+                    + Nowy Wpis
+                </a>
+            </Authorized>
+            <NotAuthorized>
+                <a href="/login" class="btn btn-outline-dark rounded-pill px-4 py-2">
+                    Zaloguj się, aby napisać
+                </a>
+            </NotAuthorized>
+        </AuthorizeView>
+    </div>
+
+    @if (wpisy is null)
+    {
+        <div class="text-center py-5 text-muted">Ładowanie forum...</div>
+    }
+    else if (!wpisy.Any())
+    {
+        <div class="alert alert-light text-center border rounded-4 py-5">
+            <h5 class="text-muted">Jeszcze nikt nic nie napisał. Bądź pierwszy!</h5>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var wpis in wpisy)
+            {
+                <div class="col-12">
+                    <a href="/forum/@wpis.Id" class="text-decoration-none text-dark">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 transition-hover">
+                            <h4 class="fw-bold mb-2">@wpis.Tytul</h4>
+                            <p class="text-secondary mb-3 text-truncate">
+                                @wpis.Tresc
+                            </p>
+                            <div class="d-flex justify-content-between text-muted small">
+                                <span>
+                                    <strong class="text-dark">@(wpis.Author?.UserName ?? "Nieznany")</strong> 
+                                    • @wpis.DataDodania.ToString("dd.MM.yyyy HH:mm")
+                                </span>
+                                <span>
+                                    Komentarze: @wpis.Komentarze.Count
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<Wpis>? wpisy;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Pobieramy wpisy wraz z danymi autora i ilością komentarzy
+        wpisy = await Db.Wpisy
+            .Include(w => w.Author)
+            .Include(w => w.Komentarze)
+            .OrderByDescending(w => w.DataDodania)
+            .AsNoTracking()
+            .ToListAsync();
+    }
+}

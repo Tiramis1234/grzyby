@@ -1,10 +1,47 @@
-﻿<nav class="navbar navbar-expand navbar-light bg-white border-bottom">
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="">Blank</a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
-            </li>
-        </ul>
+        <a class="navbar-brand fw-bold" href="">ATLAS GRZYBÓW</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Linki z lewej strony -->
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item px-2">
+                    <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">Home</NavLink>
+                </li>
+                <li class="nav-item px-2">
+                    <NavLink class="nav-link text-dark" href="wiki">Atlas</NavLink>
+                </li>
+            </ul>
+
+            <!-- Zmiana stanu w zależności od zalogowania (Prawa strona) -->
+            <ul class="navbar-nav ms-auto align-items-center">
+                <AuthorizeView>
+                    <Authorized>
+                        <li class="nav-item px-2">
+                            <span class="nav-link text-muted">Zalogowano jako <strong class="text-dark">@context.User.Identity?.Name</strong></span>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <form action="/logout" method="post">
+                                <AntiforgeryToken /> <!-- Antiforgery zabezpiecza przycisk przed atakami -->
+                                <button type="submit" class="btn btn-outline-danger rounded-pill px-4">Wyloguj</button>
+                            </form>
+                        </li>
+                    </Authorized>
+                    
+                    <NotAuthorized>
+                        <li class="nav-item px-2">
+                            <NavLink class="nav-link text-dark fw-bold" href="login">Zaloguj</NavLink>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-dark rounded-pill px-4" href="register">Rejestracja</a>
+                        </li>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </ul>
+        </div>
     </div>
 </nav>
