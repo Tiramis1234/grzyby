@@ -307,7 +307,7 @@ namespace grzyby.Migrations
                             Jadalny = true,
                             Nazwa = "Purchawka chropowata",
                             Opis = "Młode owocniki (gdy ich wnętrze jest całkowicie białe) są jadalne i bardzo smaczne.",
-                            Rodzina = "Pieczarkowate",
+                            Rodzina = "Purchawkowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lycoperdon_perlatum.jpg?width=800"
                         },
                         new
@@ -397,7 +397,7 @@ namespace grzyby.Migrations
                             Jadalny = true,
                             Nazwa = "Płomiennica zimowa",
                             Opis = "Cenny grzyb rosnący zimą pod śniegiem na pniach drzew liściastych.",
-                            Rodzina = "Kępkowcowate",
+                            Rodzina = "Fizalakowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Flammulina_velutipes.jpg?width=800"
                         },
                         new
@@ -730,7 +730,7 @@ namespace grzyby.Migrations
                             Jadalny = true,
                             Nazwa = "Pieniążek dębowy",
                             Opis = "Drobny grzybek o cienkim trzonie z jasnobrązowym kapeluszem. Występuje masowo pod dębami. Uznawany za jadalny po obróbce.",
-                            Rodzina = "Omphalotaceae",
+                            Rodzina = "Kępkowcowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gymnopus_dryophilus.jpg?width=800"
                         },
                         new
@@ -756,7 +756,7 @@ namespace grzyby.Migrations
                             Id = 65,
                             Jadalny = false,
                             Nazwa = "Lejkówka jadowita",
-                            Opis = "Mały, niepozorny biały grzyb rosnący na trawnikach i pastwiskach. Silnie trujący – zawiera muskarynę, prowokując ślinotok i zlewne poty.",
+                            Opis = "Mały, niepozorny biały grzyb rosnący na trawnikach i pastwiskach. Silnie trujący – zawiera muskarynę.",
                             Rodzina = "Gąskowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clitocybe_dealbata.jpg?width=800"
                         },
@@ -765,7 +765,7 @@ namespace grzyby.Migrations
                             Id = 66,
                             Jadalny = false,
                             Nazwa = "Krowiak aksamitny",
-                            Opis = "Posiada masywny, brązowy, grubo zamszowy trzon boczny lub centralny. Rośnie na martwym drewnie. Kwaśny i ciężkostrawny.",
+                            Opis = "Posiada masywny, brązowy, grubo zamszowy trzon boczny lub centralny. Rośnie na martwym drewnie. Niejadalny.",
                             Rodzina = "Tapinellaceae",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tapinella_atrotomentosa.jpg?width=800"
                         },
@@ -774,7 +774,7 @@ namespace grzyby.Migrations
                             Id = 67,
                             Jadalny = false,
                             Nazwa = "Lisówka pomarańczowa",
-                            Opis = "Nazywana potocznie 'fałszywą kurką'. Blaszki dużo drobniejsze, cienkie, kapelusz bywa jaskrawszy. Niejadalna, u niektórych wywołuje zatrucia.",
+                            Opis = "Nazywana potocznie 'fałszywą kurką'. Blaszki dużo drobniejsze, cienkie, kapelusz bywa jaskrawszy. Niejadalna.",
                             Rodzina = "Lisówkowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hygrophoropsis_aurantiaca.jpg?width=800"
                         },
@@ -783,7 +783,7 @@ namespace grzyby.Migrations
                             Id = 68,
                             Jadalny = true,
                             Nazwa = "Twardzioszek przydrożny",
-                            Opis = "Rośnie w trawie tworząc słynne 'czarcie kręgi'. Ma mały kapelusz z garbem i bardzo twardy, elastyczny trzon. Ceniony grzyb do zup.",
+                            Opis = "Rośnie w trawie tworząc słynne 'czarcie kręgi'. Ma mały kapelusz z garbem i bardzo twardy, elastyczny trzon.",
                             Rodzina = "Twardzioszkowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Marasmius_oreades.jpg?width=800"
                         },
@@ -801,7 +801,7 @@ namespace grzyby.Migrations
                             Id = 70,
                             Jadalny = true,
                             Nazwa = "Klejówka świerkowa",
-                            Opis = "Kapelusz szary i gruby obficie pokryty przezroczystym, grubym śluzem, który należy zerwać. Gotowany zmienia kolor na fioletowy. Smaczna.",
+                            Opis = "Kapelusz obficie pokryty grubym śluzem, który należy zerwać. Gotowany zmienia kolor na fioletowy.",
                             Rodzina = "Klejówkowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gomphidius_glutinosus.jpg?width=800"
                         },
@@ -810,7 +810,7 @@ namespace grzyby.Migrations
                             Id = 71,
                             Jadalny = true,
                             Nazwa = "Zasłonak fioletowy",
-                            Opis = "Wygląda zjawiskowo: jest od stóp do głów atramentowofioletowy. Jadalny, choć w Polsce rzadki (często pod ochroną).",
+                            Opis = "Wygląda zjawiskowo: jest od stóp do głów atramentowofioletowy. Jadalny, choć w Polsce rzadki.",
                             Rodzina = "Zasłonakowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_violaceus.jpg?width=800"
                         },
@@ -819,8 +819,8 @@ namespace grzyby.Migrations
                             Id = 72,
                             Jadalny = true,
                             Nazwa = "Purchawka gruszkowata",
-                            Opis = "Ma gładką skórkę i w przeciwieństwie do chropowatej – rośnie licznie na martwym drewnie, a nie w ziemi. Jadalna dopóki biała w środku.",
-                            Rodzina = "Pieczarkowate",
+                            Opis = "Ma gładką skórkę, rośnie licznie na martwym drewnie, a nie w ziemi. Jadalna dopóki biała w środku.",
+                            Rodzina = "Purchawkowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Apioperdon_pyriforme.jpg?width=800"
                         },
                         new
@@ -828,8 +828,8 @@ namespace grzyby.Migrations
                             Id = 73,
                             Jadalny = true,
                             Nazwa = "Czasznica olbrzymia",
-                            Opis = "Biała, kulista purchawka osiągająca wielkość piłki lekarskiej (nawet kilkanaście kilogramów!). Wybitna na kotlety, gdy wnętrze jest idealnie białe.",
-                            Rodzina = "Pieczarkowate",
+                            Opis = "Biała, kulista purchawka osiągająca wielkość piłki. Wybitna na kotlety, gdy wnętrze jest idealnie białe.",
+                            Rodzina = "Purchawkowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Calvatia_gigantea.jpg?width=800"
                         },
                         new
@@ -837,7 +837,7 @@ namespace grzyby.Migrations
                             Id = 74,
                             Jadalny = true,
                             Nazwa = "Sromotnik smrodliwy",
-                            Opis = "W dorosłej formie wydziela odór psującego się mięsa wabiąc muchy. Młoda forma ('czarcie jajo') jest jadalna i w wielu krajach stanowi rarytas.",
+                            Opis = "W dorosłej formie wydziela odór wabiąc muchy. Młoda forma ('czarcie jajo') jest jadalna i stanowi rarytas.",
                             Rodzina = "Sromotnikowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Phallus_impudicus.jpg?width=800"
                         },
@@ -846,7 +846,7 @@ namespace grzyby.Migrations
                             Id = 75,
                             Jadalny = true,
                             Nazwa = "Żagiew łuskowa",
-                            Opis = "Duża huba o zapachu świeżego ogórka lub arbuza. Pasożyt drzew liściastych. Bardzo młode owocniki są jadalne po ugotowaniu.",
+                            Opis = "Duża huba o zapachu świeżego ogórka lub arbuza. Pasożyt drzew liściastych. Młode owocniki są jadalne.",
                             Rodzina = "Żagwiowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cerioporus_squamosus.jpg?width=800"
                         },
@@ -855,7 +855,7 @@ namespace grzyby.Migrations
                             Id = 76,
                             Jadalny = false,
                             Nazwa = "Łuskwiak nastroszony",
-                            Opis = "Cały pokryty gęstymi, suchymi, sterczącymi łuskami. Występuje kępami u podnóży drzew. Jest twardy, gorzkawy i może wywołać niestrawność.",
+                            Opis = "Pokryty sterczącymi łuskami. Występuje kępami u podnóży drzew. Gorzkawy, może wywołać niestrawność.",
                             Rodzina = "Pierścieniakowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pholiota_squarrosa.jpg?width=800"
                         },
@@ -864,7 +864,7 @@ namespace grzyby.Migrations
                             Id = 77,
                             Jadalny = true,
                             Nazwa = "Ucho bzowe",
-                            Opis = "Często nazywany 'grzybem Mun'. Elastyczny, żelatynowaty grzyb rosnący głównie zimą na gałęziach czarnego bzu. Idealny do dań kuchni azjatyckiej.",
+                            Opis = "Często nazywany 'grzybem Mun'. Elastyczny, rośnie głównie zimą na gałęziach czarnego bzu.",
                             Rodzina = "Uszakowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Auricularia_auricula-judae.jpg?width=800"
                         },
@@ -873,7 +873,7 @@ namespace grzyby.Migrations
                             Id = 78,
                             Jadalny = true,
                             Nazwa = "Żółciak siarkowy",
-                            Opis = "Wydaje jaskrawożółte półki na drzewach liściastych. Potocznie zwany 'leśnym kurczakiem' bo smażony w panierce mocno go przypomina (jadalny tylko młody).",
+                            Opis = "Półki w jaskrawożółtym kolorze. Potocznie 'leśny kurczak' bo smażony mocno go przypomina (jadalny młody).",
                             Rodzina = "Żagwiowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Laetiporus_sulphureus.jpg?width=800"
                         },
@@ -882,7 +882,7 @@ namespace grzyby.Migrations
                             Id = 79,
                             Jadalny = true,
                             Nazwa = "Maślanka łagodna",
-                            Opis = "W odróżnieniu od trującej maślanki wiązkowej ma rdzawy, gładki kapelusz i łagodny smak. Dobry grzyb jadalny używany na przetwory.",
+                            Opis = "W odróżnieniu od trującej maślanki wiązkowej ma rdzawy kapelusz i łagodny smak. Dobry grzyb na przetwory.",
                             Rodzina = "Pierścieniakowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hypholoma_capnoides.jpg?width=800"
                         },
@@ -891,9 +891,1809 @@ namespace grzyby.Migrations
                             Id = 80,
                             Jadalny = true,
                             Nazwa = "Opieńka ciemna",
-                            Opis = "Równie popularna i smaczna jak miodowa, ale zazwyczaj posiada nieco ciemniejszy, mocniej pokryty łuseczkami kapelusz.",
+                            Opis = "Równie smaczna jak miodowa, ale zazwyczaj posiada mocniej pokryty łuseczkami, ciemniejszy kapelusz.",
                             Rodzina = "Obrzękowcowate",
                             ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Armillaria_ostoyae.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            Jadalny = true,
+                            Nazwa = "Boczniak mikołajkowy",
+                            Opis = "Smaczny boczniak o grubym trzonie i jędrnym miąższu. W warunkach naturalnych rośnie na korzeniach mikołajka polnego.",
+                            Rodzina = "Boczniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pleurotus_eryngii.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            Jadalny = true,
+                            Nazwa = "Gąsówka naga",
+                            Opis = "Grzyb o charakterystycznym fioletowym zabarwieniu, występujący jesienią. Jadalny po odpowiednim wygotowaniu.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lepista_nuda.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            Jadalny = false,
+                            Nazwa = "Gąsówka mglista",
+                            Opis = "Duży, szary grzyb o ciężkim, mydlanym zapachu. Może u wielu osób powodować zatrucia pokarmowe.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clitocybe_nebularis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            Jadalny = true,
+                            Nazwa = "Lejkówka wonna",
+                            Opis = "Posiada rzadki, seledynowo-zielony kolor oraz uderzająco mocny zapach anyżku. Ceniony jako dodatek zapachowy.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clitocybe_odora.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            Jadalny = false,
+                            Nazwa = "Lejkówka liściowa",
+                            Opis = "Niewielki, śnieżnobiały grzyb wyrastający masowo w lasach liściastych. Poważnie trujący (zawiera muskarynę).",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clitocybe_phyllophila.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Jadalny = true,
+                            Nazwa = "Monetka bukowa",
+                            Opis = "Wygląda jak biała, silnie śluzowata parasolka rosnąca wysoko na pniach starych buków. Jadalny po usunięciu śluzu.",
+                            Rodzina = "Monetkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Oudemansiella_mucida.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Jadalny = false,
+                            Nazwa = "Grzybówka krwista",
+                            Opis = "Piękny grzybek z bordowo-fioletowym kapeluszem. Po złamaniu łodyżki wydziela ciemnoczerwony płyn.",
+                            Rodzina = "Grzybówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycena_haematopus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Jadalny = false,
+                            Nazwa = "Grzybówka dzwoneczkowata",
+                            Opis = "Bardzo drobny, dzwoneczkowaty grzyb rosnący gęstymi kępami na pniach drzew wyłącznie późną jesienią i zimą.",
+                            Rodzina = "Grzybówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycena_tintinnabulum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Jadalny = false,
+                            Nazwa = "Grzybówka hełmiasta",
+                            Opis = "Pospolity grzyb o szarobrązowym, dzwonkowatym kapeluszu i twardym, wydrążonym trzonie. Niejadalny.",
+                            Rodzina = "Grzybówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycena_galericulata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            Jadalny = true,
+                            Nazwa = "Drobnołuszczak jeleni",
+                            Opis = "Grzyb wyrastający z gnijącego drewna, posiadający różowawe blaszki i zapach przypominający surową rzodkiew.",
+                            Rodzina = "Drobnołuszczakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pluteus_cervinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Jadalny = true,
+                            Nazwa = "Wilgotnica papuzia",
+                            Opis = "Maleńki grzyb w kolorze papuziej zieleni, bardzo obficie pokryty lśniącym śluzem. Występuje na nienawożonych łąkach.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gliophorus_psittacinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Jadalny = false,
+                            Nazwa = "Wilgotnica stożkowata",
+                            Opis = "Początkowo jaskrawopomarańczowy i stożkowaty grzyb, który z wiekiem oraz po uszkodzeniu intensywnie czernieje.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hygrocybe_conica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Jadalny = true,
+                            Nazwa = "Wodnicha późna",
+                            Opis = "Pojawia się późną jesienią w lasach sosnowych, nierzadko z pierwszym śniegiem. Ma śluzowaty, oliwkowy kapelusz.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hygrophorus_hypothejus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Jadalny = true,
+                            Nazwa = "Wodnicha marcowa",
+                            Opis = "Rzadki grzyb o krępym, popielatoszarym wyglądzie. Wyrasta wczesną wiosną po stopnieniu śniegów.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hygrophorus_marzuolus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak spiczasty",
+                            Opis = "Niewielki jesienny grzybek w kolorach wilgotnej ziemi o ostro zakończonym czubku kapelusza.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_acutus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak krwisty",
+                            Opis = "Cały grzyb ma intensywnie, krwiście czerwony kolor. Dawniej wyciąg z niego służył do barwienia włóczki.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_sanguineus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Jadalny = false,
+                            Nazwa = "Dzwonkówka trująca",
+                            Opis = "Duży grzyb blaszkowy powodujący niezwykle silne, ciężkie zatrucia układu pokarmowego.",
+                            Rodzina = "Dzwonkówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Entoloma_sinuatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Jadalny = true,
+                            Nazwa = "Wieruszka tarczowata",
+                            Opis = "Smaczny wiosenny grzyb wyrastający często pod drzewami z rodziny różowatych (śliwy, tarnina).",
+                            Rodzina = "Dzwonkówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Entoloma_clypeatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Jadalny = true,
+                            Nazwa = "Koralówka złocista",
+                            Opis = "Gęsto rozgałęziony grzyb rosnący na ziemi, do złudzenia przypominający okazały morki koralowiec o złotej barwie.",
+                            Rodzina = "Siostrzankowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ramaria_aurea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Jadalny = false,
+                            Nazwa = "Koralówka strojna",
+                            Opis = "Trująca koralówka charakteryzująca się łososiowo-różowym pniem i cytrynowożółtymi końcówkami gałązek.",
+                            Rodzina = "Siostrzankowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ramaria_formosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Jadalny = false,
+                            Nazwa = "Goździeniec fioletowy",
+                            Opis = "Delikatny, ametystowo-fioletowy grzyb rosnący na trawnikach w postaci kruchych paluszków.",
+                            Rodzina = "Goździeńcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clavaria_zollingeri.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Jadalny = false,
+                            Nazwa = "Buławka spłaszczona",
+                            Opis = "Drobne, bladożółte owocniki wyrastające z opadłego igliwia, przypominające języczki lub spłaszczone maczugi.",
+                            Rodzina = "Buławkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clavariadelphus_ligula.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Jadalny = true,
+                            Nazwa = "Soplówka jeżowata",
+                            Opis = "Grzyb nadrzewny o długich, białych kolcach. Posiada udokumentowane właściwości poprawiające pamięć (Lion's Mane).",
+                            Rodzina = "Soplówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hericium_erinaceus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Jadalny = true,
+                            Nazwa = "Soplówka bukowa",
+                            Opis = "Prześliczny, śnieżnobiały, koralowaty grzyb opadający niczym lodowe sople z martwych, leżących buków.",
+                            Rodzina = "Soplówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hericium_coralloides.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Jadalny = true,
+                            Nazwa = "Szyszkowiec łuskowaty",
+                            Opis = "Bardzo oryginalny, czarno-szary grzyb. Jego mocno nastroszony kapelusz wygląda identycznie jak świerkowa szyszka.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Strobilomyces_strobilaceus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Jadalny = true,
+                            Nazwa = "Złotak rdzawy",
+                            Opis = "Nazywany Borowikiem Amerykańskim. Grzyb inwazyjny w Polsce, z bardzo wysokim trzonem o podłużnych bruzdach.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Aureoboletus_projectellus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Jadalny = true,
+                            Nazwa = "Poroblaszek żółtogórny",
+                            Opis = "Należy do borowików, a jednak pod kapeluszem posiada wyraźne żółte blaszki połączone charakterystycznymi żyłkami.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Phylloporus_pelletieri.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Jadalny = false,
+                            Nazwa = "Borowik grubotrzonowy",
+                            Opis = "Grzyb o ładnym szarym kapeluszu i intensywnie czerwonym trzonie z siateczką. Niestety tak gorzki, że psuje każdą potrawę.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Caloboletus_calopus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Jadalny = false,
+                            Nazwa = "Borowik korzeniasty",
+                            Opis = "Duży borowik bladoszarej barwy, siniejący po przecięciu i posiadający silny, nieprzyjemnie gorzki smak.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Caloboletus_radicans.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Jadalny = true,
+                            Nazwa = "Borowik królewski",
+                            Opis = "Bajecznie kolorowy, rzadki borowik (pod ochroną). Ma różowo-malinowy kapelusz i jaskrawożółty trzon z rurkami.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Butyriboletus_regius.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Jadalny = true,
+                            Nazwa = "Borowik żółtobrązowy",
+                            Opis = "Masywny grzyb lasów liściastych o zamszowym kapeluszu i głęboko zakorzenionym w dnie leśnym trzonie.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Butyriboletus_appendiculatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Jadalny = true,
+                            Nazwa = "Piaskowiec kasztanowaty",
+                            Opis = "Piękny kasztanowy kapelusz i kruchy miąższ. Rozpoznawalny po tym, że jego dorosły trzon staje się w środku pusty.",
+                            Rodzina = "Piaskowcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gyroporus_castaneus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Jadalny = true,
+                            Nazwa = "Klejek rdzawy",
+                            Opis = "Niezwykły iglasty grzyb o gładkim trzonie, którego miąższ podczas gotowania z miedzianego zmienia kolor na filetowy.",
+                            Rodzina = "Klejówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Chroogomphus_rutilus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Jadalny = true,
+                            Nazwa = "Maślak lepki",
+                            Opis = "Maślak o popielato-szarym kolorze. Podobnie jak wiele innych maślaków wymaga do życia sąsiedztwa korzeni modrzewi.",
+                            Rodzina = "Maślakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Suillus_viscidus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Jadalny = true,
+                            Nazwa = "Maślak trydencki",
+                            Opis = "Pojawia się wyłącznie pod modrzewiami i rzuca się w oczy wspaniałym, ciemnopomarańczowym zabarwieniem rurek.",
+                            Rodzina = "Maślakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Suillus_tridentinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Jadalny = true,
+                            Nazwa = "Maślak żółtawy",
+                            Opis = "Drobny grzybek torfowiskowy rosnący tuż przy bagnach i sosnach dwuigielnych. Rzadko spotykany, posiada pierścień.",
+                            Rodzina = "Maślakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Suillus_flavidus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Jadalny = true,
+                            Nazwa = "Podgrzybek żeberkowany",
+                            Opis = "Ciemny podgrzybek o popękanym mroźnym wierzchu kapelusza, skrywający intensywnie, neonowo-żółty, twardy miąższ.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Xerocomellus_pruinatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Jadalny = true,
+                            Nazwa = "Goryczak purpurowozarodnikowy",
+                            Opis = "Unikalny rurkowy grzyb w kolorze dymu lub całkowicie czarnym. Na przełamaniu jest różowawy. Jadalny, choć dość mdły.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tylopilus_porphyrosporus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Jadalny = true,
+                            Nazwa = "Koźlarz dębowy",
+                            Opis = "Szlachetny koźlarz rosnący zazwyczaj blisko dębów, tworzący piękne, masywne, ceglasto-brązowe owocniki.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Leccinum_quercinum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Jadalny = true,
+                            Nazwa = "Koźlarz świerkowy",
+                            Opis = "Kolejny reprezentant grupy czerwonych koźlarzy. Związany ze świerkami, jego czarne łuseczki gęsto pokrywają trzon.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Leccinum_piceinum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Jadalny = true,
+                            Nazwa = "Koźlarz sosnowy",
+                            Opis = "Rośnie głównie na piaszczystych glebach. Bardzo smaczny grzyb rzadziej spotykany od innych gatunków z rodziny.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Leccinum_vulpinum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Jadalny = true,
+                            Nazwa = "Koźlarz białawy",
+                            Opis = "Wyjątkowy grzyb bagienny posiadający prawie całkowicie biały lub seledynowy kapelusz. Miąższ jest nieco wodnisty.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Leccinum_holopus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Jadalny = false,
+                            Nazwa = "Hubiak pospolity",
+                            Opis = "Stwardniała na kamień huba na pniach starych brzóz. Wykorzystywana wieki temu jako naturalna podpałka z krzesiwem.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Fomes_fomentarius.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Jadalny = true,
+                            Nazwa = "Pniarek owczy",
+                            Opis = "Jasny, twardy, pofałdowany grzyb rosnący prosto z ziemi na zboczach górskich, bardzo smaczny marynowany.",
+                            Rodzina = "Naziemkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Albatrellus_ovinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Jadalny = false,
+                            Nazwa = "Pniarek lekarski",
+                            Opis = "Pasożyt modrzewi stosowany przez setki lat w medycynie. Ma gorzki miąższ. Dziś skrajnie rzadki w naturalnym środowisku.",
+                            Rodzina = "Pniarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Fomitopsis_officinalis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Jadalny = false,
+                            Nazwa = "Pniarek obrzeżony",
+                            Opis = "Posiada jaskrawą, pomarańczowo-czerwoną obwódkę krawędzi. Często można na niej dostrzec duże, spływające krople płynu.",
+                            Rodzina = "Pniarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Fomitopsis_pinicola.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Jadalny = false,
+                            Nazwa = "Wrośniak różnobarwny",
+                            Opis = "Grzyb porastający kłody w formie pięknych rozetek (tzw. ogon indyka). Przebadany medycznie, jednak zbyt twardy by zjeść.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Trametes_versicolor.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Jadalny = false,
+                            Nazwa = "Wrośniak szorstki",
+                            Opis = "Blady, nadrzewny owocnik, którego wierzchnia warstwa jest bardzo wyraźnie, szorstko owłosiona niczym szczotka.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Trametes_hirsuta.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Jadalny = false,
+                            Nazwa = "Błyskoporek podkorowy",
+                            Opis = "Znany jako grzyb Chaga. Z zewnątrz przypomina zwęglenie drewna. Parzy się z niego cenne i zdrowe napary przeciwutleniające.",
+                            Rodzina = "Szczeciniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Inonotus_obliquus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Jadalny = true,
+                            Nazwa = "Żagwica listkowata",
+                            Opis = "Tworzy imponujące, kuliste, wielokilogramowe skupiska kapeluszy przy dębach. Japończycy nazywają ją grzybem Maitake.",
+                            Rodzina = "Wachlarzowcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Grifola_frondosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Jadalny = false,
+                            Nazwa = "Lakownica żółtawa",
+                            Opis = "Grzyb o twardym, czerwonym trzonku wyglądającym jak polakierowane rzeźbione drewno (Reishi). Powszechny w ziołolecznictwie.",
+                            Rodzina = "Lakownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ganoderma_lucidum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Jadalny = false,
+                            Nazwa = "Lakownica spłaszczona",
+                            Opis = "Płaski, dyskowaty grzyb tworzący półki na drzewach liściastych. Jego śnieżnobiały, gładki spód czernieje nawet przy lekkim nacisku.",
+                            Rodzina = "Lakownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ganoderma_applanatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Jadalny = false,
+                            Nazwa = "Białoporek brzozowy",
+                            Opis = "Wygląda jak wypukła, puszysta poduszeczka osadzona na pniu brzóz. W przeszłości stosowano go do tamowania krwawień z ran.",
+                            Rodzina = "Pniarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Piptoporus_betulinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Jadalny = false,
+                            Nazwa = "Kisielnica trzoneczkowa",
+                            Opis = "Po deszczu na patykach widać te miękkie, pofałdowane, czarne i galaretowate worki. Wyschnięte zlewają się z korą dębu.",
+                            Rodzina = "Uszakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Exidia_glandulosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Jadalny = true,
+                            Nazwa = "Trzęsak pomarańczowożółty",
+                            Opis = "Fantastyczny galaretowaty, złocistożółty grzyb wyglądający często jak pomięta struktura mózgu na suchej, liściastej gałęzi.",
+                            Rodzina = "Trzęsakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tremella_mesenterica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Jadalny = false,
+                            Nazwa = "Uszak skórnikowaty",
+                            Opis = "Blisko spokrewniony z Mun. Dolna strona grzyba przypomina fioletowo-brązowe użyłkowanie, górna jest matowa i włochata.",
+                            Rodzina = "Uszakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Auricularia_mesenterica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Jadalny = true,
+                            Nazwa = "Galaretek kolczasty",
+                            Opis = "Istne dziwactwo – kapelusik przypomina żelkę, ale na dolnej jego powierzchni wyrastają prawdziwe, półprzezroczyste kolce.",
+                            Rodzina = "Trzęsakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudohydnum_gelatinosum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Jadalny = true,
+                            Nazwa = "Łuskwiak zmienny",
+                            Opis = "Pyszny grzyb tworzący bogate kępy, ale zbierany z narażeniem życia – jest identyczny w wyglądzie z jadowitą hełmówką.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Kuehneromyces_mutabilis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Jadalny = false,
+                            Nazwa = "Łuskwiak złotawy",
+                            Opis = "Rozwija żółtozłoty kapelusz z dużymi, ciemniejszymi łuskami tonącymi w wyraźnym śluzie. Silnie trujący.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pholiota_aurivella.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Jadalny = false,
+                            Nazwa = "Łysiczka lancetowata",
+                            Opis = "Drobny polny grzybek o stożkowatym kapeluszu. Jej posiadanie jest w Polsce zakazane ze względu na silną moc halucynogenną.",
+                            Rodzina = "Kruchaweczkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Psilocybe_semilanceata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 141,
+                            Jadalny = false,
+                            Nazwa = "Hełmówka jadowita",
+                            Opis = "Śmiertelnie trujący owocnik pokryty żółtobrązowym kolorem rdzawym. Jej toksyny całkowicie zatrzymują syntezę białek w wątrobie.",
+                            Rodzina = "Hymenogastracae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Galerina_marginata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 142,
+                            Jadalny = true,
+                            Nazwa = "Pierścieniak uprawny",
+                            Opis = "Często celowo szczepiony w ogrodowych zrębkach i kompostownikach. Jego okazałe, bordowe owocniki bywają przysmakiem.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Stropharia_rugosoannulata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Jadalny = false,
+                            Nazwa = "Pierścieniak grynszpanowy",
+                            Opis = "Wyróżnia się spośród innych unikalną niebiesko-zieloną, turkusową i niezwykle oślizgłą barwą z białymi płateczkami okrywy na brzegach.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Stropharia_aeruginosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Jadalny = true,
+                            Nazwa = "Polówka zawoalowana",
+                            Opis = "Jeden z pierwszych większych grzybów wiosny, wyrasta bardzo tłumnie w miejskich parkach i przydrożach pełnych kory.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Agrocybe_praecox.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 145,
+                            Jadalny = true,
+                            Nazwa = "Czasznica workowata",
+                            Opis = "Stosunkowo duża biała purchawka o charakterystycznym trzonie rozszerzającym się ku górze niczym gruszka czy nabity worek.",
+                            Rodzina = "Purchawkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Calvatia_excipuliformis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Jadalny = true,
+                            Nazwa = "Kurzawka czerniejąca",
+                            Opis = "Skórzasta kulista kuleczka wyrastająca na suchych pastwiskach. Dorastając odłącza się od grzybni i czernieje, wydmuchując proszek.",
+                            Rodzina = "Purchawkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Bovista_nigrescens.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Jadalny = false,
+                            Nazwa = "Gwiazdosz frędzelkowaty",
+                            Opis = "Wygląda zniewalająco – jego gruba, rdzawa osłona pęka niczym szpikulce gwiazdy obnażając centralną kulistą zarodnię w środku mchu.",
+                            Rodzina = "Gwiazdoszowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Geastrum_fimbriatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 148,
+                            Jadalny = false,
+                            Nazwa = "Gwiazdosz potrójny",
+                            Opis = "Duży, wielowarstwowy gwiazdosz, którego mięsiste pęknięte dno otacza główkę przypominając lądowanie statku obcych w ściółce leśnej.",
+                            Rodzina = "Gwiazdoszowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Geastrum_triplex.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Jadalny = true,
+                            Nazwa = "Sromotnik fiołkowy",
+                            Opis = "Wyłania się z ukrytego w piaskach wydm bańkowatego, bladofioletowego jaja. Przywabia padlinówki ostrym aromatem fetoru z rozkładu.",
+                            Rodzina = "Sromotnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Phallus_hadriani.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Jadalny = false,
+                            Nazwa = "Okratek australijski",
+                            Opis = "Przywleczony z krain kangurowych. Młode pęknięte jajo wyrzuca kilka krwistoczerwonych, mięsistych ramion w kształt morskiej ośmiornicy.",
+                            Rodzina = "Sromotnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clathrus_archeri.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 151,
+                            Jadalny = false,
+                            Nazwa = "Mądziak malinowy",
+                            Opis = "Stojący cienki trzon zakończony zaokrąglonym główką w kolorze malin, bardzo obficie pokrytą śluzem i muchami poszukującymi padliny.",
+                            Rodzina = "Sromotnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mutinus_ravenelii.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Jadalny = false,
+                            Nazwa = "Piestrzenica olbrzymia",
+                            Opis = "Złotawo-żółta pofałdowana forma na kształt połówki potężnego mózgowia, rzadsza od piestrzenicy kasztanowatej, ale tak samo toksyczna.",
+                            Rodzina = "Krążkownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gyromitra_gigas.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Jadalny = true,
+                            Nazwa = "Smardz stożkowaty",
+                            Opis = "Wiosenny unikat. Jego kapelusz ma wyraźnie wyciągnięty ku górze i spiczasty kształt szarego plastra wosku pszczelego.",
+                            Rodzina = "Smardzowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Morchella_conica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 154,
+                            Jadalny = true,
+                            Nazwa = "Smardz wyniosły",
+                            Opis = "Podobny do innych rzadkich smardzy, często związany ze zrębami w borach świerkowych – niesamowity w smaku na maśle po uduszeniu.",
+                            Rodzina = "Smardzowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Morchella_elata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Jadalny = true,
+                            Nazwa = "Naparstniczka czeska",
+                            Opis = "Chroniona wiosenna główka, przypominająca dzwon lub kapturek tylko czubkiem przylegająca i nasunięta na bardzo długi, prosty trzon.",
+                            Rodzina = "Smardzowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Verpa_bohemica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Jadalny = true,
+                            Nazwa = "Kustrzebka pomarańczowa",
+                            Opis = "Nieregularne miseczki lub kraterki leżące na gołej, zruszonej ziemi lasu. Biją po oczach neonowo jarzącą pomarańczową barwą na duże odległości.",
+                            Rodzina = "Kustrzebkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Aleuria_aurantia.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 157,
+                            Jadalny = true,
+                            Nazwa = "Kustrzebka pęcherzykowata",
+                            Opis = "Zwykłe cienkie jasnobrązowe pucharki zbierające się dużymi stłoczeniami w kompostownikach z obornikiem i przegnitym nawozem.",
+                            Rodzina = "Kustrzebkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Peziza_vesiculosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Jadalny = false,
+                            Nazwa = "Pięknóg żółty",
+                            Opis = "Mały, sprężysty grzybek wypuszczający intensywnie jaskrawe, złocistożółte zaostrzone rogi prosto z zagrzebanych gałęzi drzew iglastych.",
+                            Rodzina = "Łzawnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Calocera_viscosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 159,
+                            Jadalny = true,
+                            Nazwa = "Buławka obcięta",
+                            Opis = "Miąższ ukształtowany w dużą, zwężającą się pomarańczową pałkę, jakby uciętą od góry równo tasakiem tworząc gładką, stołową platformę.",
+                            Rodzina = "Buławkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clavariadelphus_truncatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Jadalny = true,
+                            Nazwa = "Szmaciak dębowy",
+                            Opis = "Podobny do siedzuń sosnowego z tym wyjątkiem, że jest dużo bardziej gładki z wyraźnymi liściastymi wstążkami, wyrasta przy pniach dębu.",
+                            Rodzina = "Siedzuniowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Sparassis_brevipes.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 161,
+                            Jadalny = false,
+                            Nazwa = "Tęgoskór cytrynowy",
+                            Opis = "Skórzasta, pękata purchawka na wierzchu bladożółtawa ze spękaniami w łuski, jej miąższ od początku dojrzewania jest sadzasto, atramentowo czarny.",
+                            Rodzina = "Tęgoskórowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Scleroderma_citrinum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Jadalny = false,
+                            Nazwa = "Tęgoskór pospolity",
+                            Opis = "Posiada dużo dłuższy i grubszy trzonek niż tęgoskór cytrynowy a okrywa brązowawa jest pełna drobnych brodawek. Wybitnie nienadający się do jedzenia.",
+                            Rodzina = "Tęgoskórowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Scleroderma_verrucosum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 163,
+                            Jadalny = true,
+                            Nazwa = "Płomiennica letnia",
+                            Opis = "Wydaje bledsze i cieńsze kapelusze niż swoja zimowa znana wszystkim siostra, występując gęstą rojadą po ulewnych, ciepłych deszczach na liściastych wywrotach.",
+                            Rodzina = "Fizalakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Flammulina_fennae.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Jadalny = true,
+                            Nazwa = "Boczniak łyżkowaty",
+                            Opis = "Częsty letni przysmak. O wiele cieńszy, niemal biały owocnik o budowie łopatek opanowujący stare drzewa osikowe wokół bagiennych terenów.",
+                            Rodzina = "Boczniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pleurotus_pulmonarius.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Jadalny = false,
+                            Nazwa = "Twardziak muszlowy",
+                            Opis = "Bardzo mocno oporny twardy grzyb rosnący głównie na wierzbowym drewnie o łuskowatym rudym kapeluszu i fioletowawym puszku u nasady.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lentinus_conchatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 166,
+                            Jadalny = false,
+                            Nazwa = "Żyłkowiec różowawy",
+                            Opis = "Nieprawdopodobny leśny wizerunek krwisto różowej siatki gęstych żył, wypiętrzających całą galaretowatą powierzchnię tego dziwnego kapelusza wiązkami nerwów.",
+                            Rodzina = "Fizalakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotus_palmatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Jadalny = true,
+                            Nazwa = "Gąsówka dwubarwna",
+                            Opis = "Jej mocny liliowo-fioletowy krótki gruby pniak mocno odcina się od całkowicie brązowego matowego i płaskiego wielkiego kapelusza w trawiastych dąbrowach.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lepista_personata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Jadalny = true,
+                            Nazwa = "Kępkowiec jasnobrązowy",
+                            Opis = "Rosną w potężnych pęczkach ściśnięte łodyżkami i elastyczne grzyby o ziemnych barwach wzdłuż ścieżek, bardzo cenne po dobrym wysmażeniu.",
+                            Rodzina = "Kępkowcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lyophyllum_decastes.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 169,
+                            Jadalny = true,
+                            Nazwa = "Czubajka czerwieniejąca",
+                            Opis = "Grzyb w skali niemal kopiujący pyszną kanię, jednak gładka i bulwiasta od spodu łodyga wraz z błyskawicznym brunatnym krwawieniem odłamków każe zachować ostrożność trawienną.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Chlorophyllum_rhacodes.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Jadalny = false,
+                            Nazwa = "Muchomor narcyzowy",
+                            Opis = "Truciciel wyglądający niczym rozpuszczona wersja swego plamistego kuzyna o mocno mylącym musztardowożółtym odcieniu ze szczątkami białych łat.",
+                            Rodzina = "Muchomorowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Amanita_gemmata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Jadalny = false,
+                            Nazwa = "Gołąbek brunatny",
+                            Opis = "Jego duża lśniąca tarcza po zjedzeniu małego surowego kawałka blaszki nieziemsko zaczyna piec w usta pozostawiając zgagę jeszcze przez parę godzin od wyplucia.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_badia.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Jadalny = false,
+                            Nazwa = "Gołąbek brzozowy",
+                            Opis = "Słaby gatunek, którego różowawa malutka główka po dotknięciu deszczu od razu blaknie niemal na biało; mocno łamliwy i paląco gorzki.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_betularum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Jadalny = true,
+                            Nazwa = "Gołąbek płowiejący",
+                            Opis = "Rude cudo iglastych puszcz, twardy gruby korzeń po naruszeniu oraz ugotowaniu drastycznie ciemnieje tracąc barwę lecz dając fenomenalny posmak grzybowy.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_decolorans.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj zieleniejący",
+                            Opis = "Wydziela mnóstwo piekącego pieprznego białego soku z blaszek, a kapelusz powlekany jest oliwkowozielonym, bardzo gęstym kleistym lepiszczem.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_blennius.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj liliowy",
+                            Opis = "Śliczna sucha struktura pokryta drobinkami w rzadkim różowo-szaro-liliowym kolorze w sąsiedztwie korzeni starej olchy.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_lilacinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 176,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj siarkowy",
+                            Opis = "Odróżnia się tym że jakikolwiek ubytek ciała wytacza z niego początkowo czyste białe mleczko by dosłownie na naszych oczach zabarwić je na gryząco żółtą siarkę.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_chrysorrheus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 177,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj bladawy",
+                            Opis = "Mięsisty i bardzo uginający się, blado kremowy okrąg posypany silnym śluzem, pojawiający się wybitnie masowo przy samych korzeniach gładkich dorosłych buków.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_pallidus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Jadalny = false,
+                            Nazwa = "Gąska rdzawobrązowa",
+                            Opis = "Jesienny symbol leśny spod brzezin o ciemnokasztanowym lepkim centrum kapelusza wyczuwalnie pachnący mieszanką mąki i siana.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tricholoma_fulvum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Jadalny = false,
+                            Nazwa = "Gąska zielonożółta",
+                            Opis = "Z przerażeniem omijana chociaż piękna. Kolorystyką oraz promienistymi zielonawymi żyłkami złudnie przebiera się za strasznego muchomora sromotnika.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tricholoma_sejunctum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Jadalny = false,
+                            Nazwa = "Gąska dachówkowata",
+                            Opis = "Brązowo miedziany owocnik którego skórka spękała we wzory bardzo przylegających do siebie łuseczek udając nakładane dachówki rzymskiego domu.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tricholoma_imbricatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Jadalny = false,
+                            Nazwa = "Gołąbek białawy",
+                            Opis = "Duży, twardy białawy grzyb z kraterkowatym kapeluszem, wydzielający słaby zapach śledzi lub owoców morza. Na ogół niejadalny.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_delica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Jadalny = false,
+                            Nazwa = "Gołąbek śmierdzący",
+                            Opis = "Żółtobrązowy kapelusz powleczony mocnym śluzem, z daleka wydziela silny, wybitnie odpychający zapach zjełczałego oleju.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_foetens.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Jadalny = true,
+                            Nazwa = "Gołąbek czarniawy",
+                            Opis = "Masywny gołąbek. Po przecięciu jego jasny miąższ czerwienieje, a potem robi się smoliście, węglisto czarny.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_nigricans.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Jadalny = true,
+                            Nazwa = "Gołąbek złotawy",
+                            Opis = "Przepiękny grzyb o pomarańczowo-czerwonym kapeluszu i intensywnie cytrynowożółtych blaszkach pod spodem. Bardzo smaczny.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_aurata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Jadalny = true,
+                            Nazwa = "Gołąbek słodkawy",
+                            Opis = "Kapelusz o zmiennej, ciemnowinnej barwie. Cechuje się łagodnym i słodkawym miąższem przypominającym orzechy.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_integra.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Jadalny = true,
+                            Nazwa = "Gołąbek cukrówka",
+                            Opis = "Duży czerwony gołąbek rosnący głównie na mokradłach i bagnach. Posiada słodkawy smak i twardy trzon.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_paludosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Jadalny = false,
+                            Nazwa = "Gołąbek różowy",
+                            Opis = "Niewielki, matowy i pudrowy owocnik o pięknej karminowej barwie. Ze względu na wiórowatą strukturę, mało atrakcyjny kulinarnie.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Russula_rosea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Jadalny = true,
+                            Nazwa = "Mleczaj dębowy",
+                            Opis = "Bardzo pospolity pod dębami grzyb wydzielający zapach roztartych liści dębu lub... pluskwiaków. Traci nieprzyjemny aromat po ugotowaniu.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_quietus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Jadalny = true,
+                            Nazwa = "Mleczaj jodłowy",
+                            Opis = "Brat rydza, rosnący jednak wyłącznie pod jodłami. Po uszkodzeniu toczy marchewkowe mleczko, które wolno blednie.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_salmonicolor.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj dołkowany",
+                            Opis = "Duży mleczaj o słomkowym kolorze i bardzo charakterystycznych 'wyżartych' ciemnych dołkach na całym trzonie. Lekko trujący.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_scrobiculatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj płowy",
+                            Opis = "Jasnobrązowy grzyb bagienny wydzielający silny zapach przyprawy maggi. Ze względu na toksyny zalecany najwyżej jako przyprawa.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_helvus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Jadalny = false,
+                            Nazwa = "Mleczaj chrząstka",
+                            Opis = "Jeden z najtwardszych grzybów blaszkowych. Duży, biały, wydzielający piekące mleczko. Niemal jak chrząstka przy krojeniu.",
+                            Rodzina = "Gołąbkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lactarius_vellereus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 193,
+                            Jadalny = false,
+                            Nazwa = "Strzępiak ceglasty",
+                            Opis = "Śmiertelnie trujący owocnik wyrastający w parkach latem. Jego stożkowaty kapelusz pod dotykiem nabiera ceglastej, czerwonej barwy.",
+                            Rodzina = "Strzępiakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Inocybe_erubescens.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 194,
+                            Jadalny = false,
+                            Nazwa = "Strzępiak pospolity",
+                            Opis = "Maleńki, fioletowawy lub biały grzybek ze stożkiem, pachnący jak surowy, gnijący ziemniak. Bardzo niebezpieczny.",
+                            Rodzina = "Strzępiakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Inocybe_geophylla.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Jadalny = false,
+                            Nazwa = "Strzępiak rzepowaty",
+                            Opis = "Brązowy grzybek iglasty którego trzon na samym dole jest charakterystycznie zgrubiały niczym miniaturowa rzepa.",
+                            Rodzina = "Strzępiakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Inocybe_napipes.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak gliniasty",
+                            Opis = "Trzon tego brązowego grzyba pokryty jest śluzowatymi obrączkami, tworzącymi schodkowaty wzór przypominający mokrą glinę.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_trivialis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 197,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak niebieskawy",
+                            Opis = "Atrakcyjny owocnik, którego młode kapelusze powlekane są lśniącym, głębokim błękitem przechodzącym z wiekiem w ochrę.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_caerulescens.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 198,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak śluzowaty",
+                            Opis = "Rośnie w igliwiu sosnowym. Bardzo pękaty, a jego trzon i kapelusz wręcz ociekają grubą, bezbarwną warstwą galaretowatego śluzu.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_mucosus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Jadalny = true,
+                            Nazwa = "Zasłonak anyżkowy",
+                            Opis = "Zielono-żółty grzyb z bulwiastym trzonem. Przełamany wydziela zjawiskowo mocny zapach anyżu, lukrecji lub kopru.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_odorifer.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak cynamonowy",
+                            Opis = "Trujący, filigranowy grzybek o kapeluszu i blaszkach barwy mielonego cynamonu. Używany naturalnie do farbowania wełny.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_cinnamomeus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Jadalny = true,
+                            Nazwa = "Pieczarka bulwiasta",
+                            Opis = "Wysoka, leśna pieczarka, której trzon zakończony jest widoczną asymetryczną bulwą. Wydziela miły zapach migdałów.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Agaricus_abruptibulbus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 202,
+                            Jadalny = true,
+                            Nazwa = "Pieczarka okazała",
+                            Opis = "Ogromna pieczarka leśna pokryta drobnymi, żółtobrązowymi łuseczkami. Smakuje wybornie, a pachnie jak słodkie marcepany.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Agaricus_augustus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Jadalny = true,
+                            Nazwa = "Pieczarka krwawiąca",
+                            Opis = "Szlachetna leśna pieczarka. Przekrojenie nożem jej miąższu wywołuje natychmiastowe wytoczenie soków barwy krwistej.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Agaricus_langei.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Jadalny = false,
+                            Nazwa = "Czubajeczka ostrołuskowa",
+                            Opis = "Mniejsza od kani, a jej kapelusz obsypany jest sterczącymi, czarnymi igiełkami z łusek. Niejadalna, lekko toksyczna.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lepiota_aspera.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 205,
+                            Jadalny = false,
+                            Nazwa = "Czubajeczka brązowooliwkowa",
+                            Opis = "Śmiertelnie trujący grzyb mylony z malutką kanią! Zawiera tę samą truciznę co sromotnik – amanitynę niszczącą wątrobę.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lepiota_brunneoincarnata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Jadalny = false,
+                            Nazwa = "Czubajeczka cuchnąca",
+                            Opis = "Rozwija malutki spadochronik z rdzawym środkiem. Zerwana natychmiast wydziela drażniący zapach sztucznego kauczuku.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lepiota_cristata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Jadalny = true,
+                            Nazwa = "Czubajka gwiaździsta",
+                            Opis = "Smaczna kania łąkowa. Rozpoznawana po tym, że skórka na kapeluszu pęka tworząc idealną, gładką brązową gwiazdę na samym środku.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Macrolepiota_excoriata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Jadalny = false,
+                            Nazwa = "Czernidłak srokaty",
+                            Opis = "Wygląda zjawiskowo na liściach dębu: bardzo długi biały trzon i mroczny czarny dzwonek nakrapiany śnieżnobiałymi łatami.",
+                            Rodzina = "Kruchaweczkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Coprinopsis_picacea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Jadalny = false,
+                            Nazwa = "Czernidłak gromadny",
+                            Opis = "Wyłania się w ilościach po kilkaset maleńkich popielatych dzwoneczków tuż obok siebie pieńku, wyglądając jak zwarty trawnik.",
+                            Rodzina = "Kruchaweczkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Coprinellus_disseminatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 210,
+                            Jadalny = true,
+                            Nazwa = "Wilgotnica pąsowa",
+                            Opis = "Błyszczący, szklisty grzybek w krwisto-pąsowym kolorze rosnący na czystych górskich pastwiskach. Jadalna, lecz zjawiskowa do rzadkości.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hygrocybe_punicea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Jadalny = true,
+                            Nazwa = "Wilgotnica śnieżna",
+                            Opis = "W całości szklisto-biały, na wpół przezroczysty grzybek wilgotnych, czystych trawników i łąk o delikatnym smaku.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cuphophyllus_virgineus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Jadalny = false,
+                            Nazwa = "Grzybówka czysta",
+                            Opis = "Dzwonkowaty fioletowy owocnik masowo zrzucający biały pył i silnie pachnący białą rzodkwią. Trujący, halucynogenny.",
+                            Rodzina = "Grzybówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycena_pura.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Jadalny = false,
+                            Nazwa = "Grzybówka różowa",
+                            Opis = "Brat grzybówki czystej o oszałamiającym, intensywnie landrynkowym, jasnoróżowym kolorze. Toksyczna.",
+                            Rodzina = "Grzybówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycena_rosea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 214,
+                            Jadalny = false,
+                            Nazwa = "Grzybówka alkaliczna",
+                            Opis = "Szara chudziutka parasolka porastająca pniaki sosny, której roztarty miąższ uderza w nozdrza ostrym smrodem chloru z amoniakiem.",
+                            Rodzina = "Grzybówkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycena_stipata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Jadalny = true,
+                            Nazwa = "Purchawka jeżowata",
+                            Opis = "Rosnąca w liściach urocza, okrągła brązowa purchawka naszpikowana długimi, zgiętymi, ciemnymi kolcami zbiegającymi się w piramidki.",
+                            Rodzina = "Purchawkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lycoperdon_echinatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Jadalny = true,
+                            Nazwa = "Purchawka łatkowata",
+                            Opis = "Biała kuleczka rosnąca w trawie, na której kolce zlewają się w płaskie skorupki opadające z czasem jak obierana gipsowa tynkarka.",
+                            Rodzina = "Purchawkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lycoperdon_marginatum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Jadalny = true,
+                            Nazwa = "Kurzawka ołowiana",
+                            Opis = "Brak klasycznego trzonu. Jej powierzchnia do złudzenia przypomina obrobioną rzemieślniczo szarą, metalową, ołowianą bilę leżącą na łące.",
+                            Rodzina = "Purchawkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Bovista_plumbea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Jadalny = false,
+                            Nazwa = "Pałeczka włośniowata",
+                            Opis = "Maleńka, niesamowita konstrukcja – brązowa główeczka wzniesiona na cienkiej i długiej wykałaczce wystająca z piaszczystych mchów z otworem na czubku.",
+                            Rodzina = "Pieczarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tulostoma_brumale.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Jadalny = false,
+                            Nazwa = "Piestrzyca kędzierzawa",
+                            Opis = "Bardzo wykręcony jesienny owocnik w białym kolorze, o kapeluszu sfałdowanym jak prześcieradło i trzonku pełnym głębokich bruzd i dziur.",
+                            Rodzina = "Piestrzycowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Helvella_crispa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Jadalny = false,
+                            Nazwa = "Piestrzyca czarna",
+                            Opis = "Posiada równie poszarpany, pognieciony w rurkę biały trzon co jej siostra, ale sama główka wygląda jak nieregularna grudka smoły.",
+                            Rodzina = "Piestrzycowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Helvella_lacunosa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Jadalny = false,
+                            Nazwa = "Piestrzyca giętka",
+                            Opis = "Elegancki i subtelny jasnobrązowy grzybek w kształcie siodła narzuconego na gładki, biały i elastyczny niczym makaron pręcik.",
+                            Rodzina = "Piestrzycowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Helvella_elastica.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 222,
+                            Jadalny = false,
+                            Nazwa = "Kolczakówka piekąca",
+                            Opis = "Niezwykły widok: podczas wilgoci ten kolczasty grzyb uwalnia przez pory na swym kapeluszu gęste krople krwistoczerwonej cieczy. Paląco piekąca, niejadalna.",
+                            Rodzina = "Kolcownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hydnellum_peckii.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Jadalny = false,
+                            Nazwa = "Kolczakówka niebieskawa",
+                            Opis = "Gruby twardy owocnik wyrastający między szyszkami i igliwiem charakteryzujący się mocnymi błękitno-stalowymi zamszowymi strefami rosnącymi u krawędzi.",
+                            Rodzina = "Kolcownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hydnellum_caeruleum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Jadalny = false,
+                            Nazwa = "Korkoząb czarnawy",
+                            Opis = "Wyglądem i w dotyku niemal czarny grzyb pokryty szorstkim mchem. Gdy ulega wyschnięciu w całości pachnie intensywnie przyprawą kozieradką.",
+                            Rodzina = "Kolcownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Phellodon_niger.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Jadalny = false,
+                            Nazwa = "Wachlarzowiec olbrzymi",
+                            Opis = "Potwornej wielkości płaty wyrastające przy pniach buków. Złamane lub poszarpane jego żółtawe liście błyskawicznie ciemnieją na smolisto-czarno.",
+                            Rodzina = "Wachlarzowcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Meripilus_giganteus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Jadalny = false,
+                            Nazwa = "Murszak rdzawy",
+                            Opis = "Ciemnordzawy niszczyciel korzeni iglastych wyrastający w pobliżu pni sosny niczym wielka miękka, poduszkowata brunatna gąbka z żółtym rantem.",
+                            Rodzina = "Murszakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Phaeolus_schweinitzii.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Jadalny = false,
+                            Nazwa = "Gmatwek dębowy",
+                            Opis = "Wypukła huba na ściętym dębowym drewnie której spodnie rurki rozrosły się w bardzo długie, zawiłe i poplątane w labirynt listewki.",
+                            Rodzina = "Pniarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Daedalea_quercina.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Jadalny = false,
+                            Nazwa = "Wrośniak anyżkowy",
+                            Opis = "Bielutki poduszkowaty grzyb opanowujący gałęzie chorych wierzb. Ułamany z drzewa rozsiewa wkoło silny, apteczny odór kropel anyżowych.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Trametes_suaveolens.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 229,
+                            Jadalny = false,
+                            Nazwa = "Gęstoporek cynobrowy",
+                            Opis = "Wygląda jak owalna, płaska poduszka ufarbowana na jaskrawo-cynobrowy odcień czerwonopomarańczowy. Rzuca się w oczy w lesie z kilkudziesięciu metrów.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pycnoporus_cinnabarinus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 230,
+                            Jadalny = false,
+                            Nazwa = "Błyskoporek dębowy",
+                            Opis = "Masywna bryła pojawiająca się u stóp prastarych dębów we wspaniałym kasztanowym kolorze i obficie roniąca bursztynowe soki na całą swą powierzchnię.",
+                            Rodzina = "Szczeciniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Inonotus_dryadeus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 231,
+                            Jadalny = false,
+                            Nazwa = "Borowik purpurowy",
+                            Opis = "Rzadki i trujący borowik z mocnym żółto-różowym trzonkiem ukrytym pod jasnym kapeluszem. Po przecięciu momentalnie robi się mocno niebiesko-atramentowy.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Rubroboletus_rhodoxanthus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 232,
+                            Jadalny = false,
+                            Nazwa = "Borowik szkarłatny",
+                            Opis = "Egzotycznie wyglądający i bajecznie rzadki w Polsce, kapelusz u niego przypomina lśniącą czerwoną śliwkę narzuconą nad intensywnie czerwonymi rurkami.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Rubroboletus_dupainii.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 233,
+                            Jadalny = true,
+                            Nazwa = "Borowik gładkotrzonowy",
+                            Opis = "Wydaje gładki (bez widocznej siateczki) żóltoczerwonawy trzon i ciemne pory. Silnie zmienia kolor po roztarciu. Jadalny tylko bardzo dobrze wygotowany.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Suillellus_queletii.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 234,
+                            Jadalny = true,
+                            Nazwa = "Podgrzybek obciętozarodnikowy",
+                            Opis = "Odróżnia się tym że spękania na ciemnym brązowym kapeluszu nie pokazują różowych szczelin (jak u kuzynów) tylko głęboką szarą zamszową pleśń.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Xerocomellus_porosporus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 235,
+                            Jadalny = true,
+                            Nazwa = "Wonnoborowik kruchy",
+                            Opis = "Mało znany rurkowy grzybek dębin wydający miły, owocowy zapach, a pod kapeluszem świecący się ostrym złotym odcieniem luźnych rurek, który z wiekiem zanika.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Aureoboletus_gentilis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 236,
+                            Jadalny = true,
+                            Nazwa = "Zamszoborowik brzoskwiniowy",
+                            Opis = "Twardy mały owocnik u którego sam dół trzonka w głębi ziemi jest mocno pomarańczowo żółty, a podstawa gąbki potrafi zabarwiać się do koloru brzoskwiniowego.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Rheubarbariboletus_persicolor.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 237,
+                            Jadalny = true,
+                            Nazwa = "Maślak daglezjowy",
+                            Opis = "Ścisły symbiotyk sprowadzonych do nas drzew daglezjowych, mieniący się wielkimi rdzawymi łuskami pękniętymi na pomarańczowawym kapeluszu.",
+                            Rodzina = "Maślakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Suillus_lakei.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 238,
+                            Jadalny = true,
+                            Nazwa = "Maślak rdzawy",
+                            Opis = "Bywa mylony ze zwyczajnym ziarnistym, ma jednak na dnie łodygi (wyjętej z igieł sosny) zawsze mocne rdzawo-różowe plamy grzybniowe na nóżce.",
+                            Rodzina = "Maślakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Suillus_collinitus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            Jadalny = true,
+                            Nazwa = "Koźlarz bruzdkowany",
+                            Opis = "Wybitny ciekawej barwy – jako jedyny z koźlarzy ma cały kapelusz i rurki w barwie złoto-żółtawej, ułożone na typowym chropowatym szarym koźlim trzonku.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Leccinum_crocipodium.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            Jadalny = true,
+                            Nazwa = "Koźlarz czarnobrązowy",
+                            Opis = "Najciemniejsza 'babka'. Spotykana z brzozami wyrzuca okazałe ciemnoczarne do brunatnych kapelusze wsparte o grubo obrośniętą na czarno nogę.",
+                            Rodzina = "Borowikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Leccinum_melaneum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            Jadalny = false,
+                            Nazwa = "Koralówka blada",
+                            Opis = "Wielki gęsty grzyb przypominający koralowce o bledziutkim łososiowo-fioletowawym tonie, wyrastający w świerkowych igłach. Powoduje ostre, bardzo niebezpieczne zatrucia.",
+                            Rodzina = "Siostrzankowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ramaria_pallida.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            Jadalny = false,
+                            Nazwa = "Koralówka sztywna",
+                            Opis = "Puszysty gęsty i wysoki koralowiec wyrastający nie z ziemi ale zawsze na zmurszałym drewnie, o miąższu elastycznym i po dotknięciu przebarwiającym się rudo.",
+                            Rodzina = "Siostrzankowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ramaria_stricta.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 243,
+                            Jadalny = false,
+                            Nazwa = "Goździeniec robakowaty",
+                            Opis = "Masowy widok cieniutkich sztywnych kremowobiałych patyczków wybijających z niskiej mchowej łąki bez jakichkolwiek rozgałęzień czy kapeluszy.",
+                            Rodzina = "Goździeńcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clavaria_fragilis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            Jadalny = false,
+                            Nazwa = "Goździeniowiec miodowy",
+                            Opis = "Intensywnie żółciutkie samotne rureczki wyrastające na polanach jak słupy odblaskowe. Rzadki klejnocik łąk o bardzo mizernym, nienadającym się do kuchni ciele.",
+                            Rodzina = "Goździeńcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clavulinopsis_helvola.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            Jadalny = false,
+                            Nazwa = "Kisielnica karmelowa",
+                            Opis = "Bursztynowa lub czerwonobrązowa wspaniała i pofałdowana galaretka roniąca grube liście prosto na uschłych cienkich gałązkach wierzbowych i brzozowych.",
+                            Rodzina = "Uszakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Exidia_recisa.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            Jadalny = false,
+                            Nazwa = "Łzawnik rozciekliwy",
+                            Opis = "Niesamowite żółto-pomarańczowe kleiste krople wybijające z pozbawionych kory suchych pni sosnowych na gołej, nagrzanej od jesiennego słońca belce.",
+                            Rodzina = "Łzawnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Dacrymyces_stillatus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            Jadalny = true,
+                            Nazwa = "Uszak gęstowłosy",
+                            Opis = "Bliski kuzyn klasycznych grzybów Mun, zewnętrzna górna powłoka jest twardo owłosiona ułatwiając przetrwanie suszy azjatyckiego stepu. Idealny do orientalnego chrupnięcia.",
+                            Rodzina = "Uszakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Auricularia_polytricha.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            Jadalny = false,
+                            Nazwa = "Skórnik szorstki",
+                            Opis = "Twarda ucho podobna konsolka która pokrywa martwe konary dębów jaskrawymi pomarańczowo-żółtymi, mocno chropowatymi w dotyku rzędami cienkich tarczek.",
+                            Rodzina = "Skórnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Stereum_hirsutum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            Jadalny = false,
+                            Nazwa = "Skórnik purpurowy",
+                            Opis = "Groźny pasożyt sadów objawiający się jako malutkie dachóweczki o zadziwiająco jaskrawo fioletowych brzegach i gładkich szarych bokach z wierzchu owocników.",
+                            Rodzina = "Skórnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Chondrostereum_purpureum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            Jadalny = false,
+                            Nazwa = "Powłocznik dębowy",
+                            Opis = "Wyrasta jako całkowicie spłaszczona niebieskawo-fioletowa, cienka jak kartka guma obleczona na powalonym dębowym drągu bez wykształcenia kapelusza.",
+                            Rodzina = "Powłocznikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Peniophora_quercina.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            Jadalny = false,
+                            Nazwa = "Mądziak psi",
+                            Opis = "Rozwija z okrągłego jaka bladożółtą, pustą wewnątrz rurkę zakończoną spiczastą, nieoderwaną główką pokrytą ciemnozielonym odpychającym szlamem na końcu.",
+                            Rodzina = "Sromotnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mutinus_caninus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            Jadalny = false,
+                            Nazwa = "Okratek czerwony",
+                            Opis = "Tworzy pustą koszykową, krwistoczerwoną kulę ze zrośniętymi ząbkowanymi oczkami jak wyplecioną gąbkę i przeraźliwie śmierdzi gnijącymi warzywami.",
+                            Rodzina = "Sromotnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Clathrus_ruber.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            Jadalny = false,
+                            Nazwa = "Czareczka długotrzonkowa",
+                            Opis = "Posiada kształt filigranowego zgrabnego szarego kieliszka opartego na stópce zakorzenionej w wilgotnej glebie po sam brzeg wypełnionego mszakiem.",
+                            Rodzina = "Piórniczkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Macroscypha_macropus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            Jadalny = true,
+                            Nazwa = "Kustrzebka brunatna",
+                            Opis = "Spore, faliste dołkowate ucha wyrastające w grupach przypominających ciemne miski porzucone na dnie brudnego lasu, o miąższu wodnistym lecz pozbawionym zapachu.",
+                            Rodzina = "Kustrzebkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Peziza_badia.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            Jadalny = true,
+                            Nazwa = "Czarka austriacka",
+                            Opis = "Jeden z pierwszych symboli wiosny ukryty pod topniejącym śniegiem. Niewielki miseczkowaty grzyb którego wnętrze ma obłędny, świetlisto-czerwony pąs.",
+                            Rodzina = "Czarkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Sarcoscypha_austriaca.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            Jadalny = false,
+                            Nazwa = "Maczużnik bojowy",
+                            Opis = "Słynny 'grzyb zombie'. Pomarańczowe cienkie maczugi wyrastają prosto ze sparaliżowanych w ziemi ciał poczwarek ciem nakazując im opuścić dno lasu.",
+                            Rodzina = "Maczużnikowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cordyceps_militaris.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            Jadalny = false,
+                            Nazwa = "Maczużnik osi",
+                            Opis = "Pasożyt specjalizujący się w niszczeniu pojedynczych os leśnych z których martwych głów wylęga zaledwie parę milimetrów swojej żółtej pałeczki rodnej.",
+                            Rodzina = "Ophiocordycipitaceae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Ophiocordyceps_sphecocephala.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            Jadalny = false,
+                            Nazwa = "Piestrzenica jesienna",
+                            Opis = "Ukształtowana w przedziwne, brunatne, dwurożne worki, z daleka imitująca siodło, ale wydająca się jesienią i skrywająca potężne ilości lotnych kwasów rakotwórczych.",
+                            Rodzina = "Krążkownicowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gyromitra_infula.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            Jadalny = false,
+                            Nazwa = "Pierścieniak półkulisty",
+                            Opis = "Żółtawy stożek porastający końskie odchody polne, mocno obślizgły z zewnątrz wydzielając stęchłą woń. Uważany za symbol słabo rozłożonych odchodów łąki.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Protostropharia_semiglobata.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 260,
+                            Jadalny = false,
+                            Nazwa = "Łysak wspaniały",
+                            Opis = "Masywne kępy mieniące się na złoto rosnące bezpośrednio u pni ściętych drzew uginają się od wagi łuskowatych grzybów o niemiłosiernie gorzkiej tonacji smakowej.",
+                            Rodzina = "Hymenogastracae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gymnopilus_junonius.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            Jadalny = false,
+                            Nazwa = "Łysak plamisty",
+                            Opis = "Drobniejszy, ale za to dużo obficiej znoszący rdzawopomarańczowe blaszki rozsiewacz twardych gorzkich i suchych pędów wokół zwalonego na mech sosnowego drewna.",
+                            Rodzina = "Hymenogastracae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gymnopilus_penetrans.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            Jadalny = true,
+                            Nazwa = "Monetka maślana",
+                            Opis = "Dość kruchy smaczny brązowy dzwon rzuca się w oczy w listopadzie a jego łodyga po zgnieceniu jest śluzowata w środku dając złudzenie wypełnienia roztopionym masłem.",
+                            Rodzina = "Omphalotaceae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodocollybia_butyracea.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            Jadalny = true,
+                            Nazwa = "Łysiczka ceglasta",
+                            Opis = "Niegdyś uznawana powszechnie jako trująca obok wiązkowej ale ma krwiście ceglasty wierzch ze swymi żółtawymi bokami. Bardzo długo ugotowana pozwala na jadalność w niektórych krajach.",
+                            Rodzina = "Pierścieniakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hypholoma_lateritium.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            Jadalny = true,
+                            Nazwa = "Pieniążek wrzecionowatotrzonowy",
+                            Opis = "Uderzający dziwactwem owocnik spod buków ze względu na niesamowity, twardy poplątany i zrośnięty korzeniowo trzon który tnie i zapętla swą strukturę ku podstawie.",
+                            Rodzina = "Omphalotaceae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Gymnopus_fusipes.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            Jadalny = true,
+                            Nazwa = "Czosnaczek szczypiorkowy",
+                            Opis = "Starszy brat czosnaczka pospolitego. Jego czarny trzonek opanowuje ściółkę emitując niewyobrażalnie mocną ostrą cebulowo czosnkową eteryczną woń rozcinającą wzrok jak cebula.",
+                            Rodzina = "Twardzioszkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Mycetinis_alliaceus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            Jadalny = true,
+                            Nazwa = "Kępkowiec ciemnoszary",
+                            Opis = "Tworzy ciasne zrośnięte trzonkami grupki popielatych i szarych lśniących twardych lejków potrafiących przybierać ciężar kilku kilogramów pośrodku starych lasów z dębem.",
+                            Rodzina = "Kępkowcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lyophyllum_fumosum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 267,
+                            Jadalny = false,
+                            Nazwa = "Podblaszek zbutwiały",
+                            Opis = "Maleńki biały grzyb wydostający się precyzyjnie prosto z zagrzebanych świerkowych opadłych starych, miękkich zepsutych szyszek i rozkładający nasiona iglaków.",
+                            Rodzina = "Wodnichowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Baeospora_myosura.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            Jadalny = true,
+                            Nazwa = "Szyszkówka świerkowa",
+                            Opis = "Identyczna względem zbutwiałej szyszkówka jadalna, rosnąca dosłownie zaraz po marcowych roztopach śniegów i stanowiąca rarytas smaku prosto ze świerkowej szyszki.",
+                            Rodzina = "Fizalakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Strobilurus_esculentus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            Jadalny = false,
+                            Nazwa = "Stożkówka delikatna",
+                            Opis = "Kruchutki i wąziutki żółto-biały stożek wybijający latem tuż pod krzewami, który zanika przed upływem nawet 12 godzin by pozostawić zaschnięty pył rozsypany na trawie.",
+                            Rodzina = "Gnojankowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Conocybe_apala.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            Jadalny = true,
+                            Nazwa = "Kruchaweczka zaroślowa",
+                            Opis = "Blady parasolik gęsto obsypany strzępami białej osłony, wybitnie smaczny chociaż rozsypujący się w palcach i niezwykle podatny na wodę, która rozmiękcza go w papkę.",
+                            Rodzina = "Kruchaweczkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Psathyrella_candolleana.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 271,
+                            Jadalny = true,
+                            Nazwa = "Kruchaweczka namakająca",
+                            Opis = "Związany z drewnem kępowy grzyb zmieniający radykalnie, higrofanicznie ubarwienie z ciepłego czekoladowego w rdzawy mat po krótkim deszczu i szybkim owianiu z rosy.",
+                            Rodzina = "Kruchaweczkowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Psathyrella_piluliformis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 272,
+                            Jadalny = false,
+                            Nazwa = "Włośnianka rosista",
+                            Opis = "Wyrzuca przez kapelusz uderzający zapach surowej rzodkwi. Z blaszek, podobnie do kolczakówek, toczy rano setki łzawiących przezroczystych drobnych kropelek mętnej wody. Trujący.",
+                            Rodzina = "Hymenogastracae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hebeloma_crustuliniforme.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 273,
+                            Jadalny = false,
+                            Nazwa = "Włośnianka musztardowa",
+                            Opis = "Należy do mocno toksycznej podgrupy o zapachu musztardowym uderzając mocną gliniastą barwą na mocnym sztywnym oszronionym w paski gładkim wielkim trzonie.",
+                            Rodzina = "Hymenogastracae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hebeloma_sinapizans.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 274,
+                            Jadalny = false,
+                            Nazwa = "Zasłonak oszowny",
+                            Opis = "Stalowo lawendowy po fioletowy masywny korzeń o bulwie roztarty rozsiewa specyficzną woń naftaliny w szafie albo dojrzałych spleśniałych jabłek ze spichlerza leśniczego.",
+                            Rodzina = "Zasłonakowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Cortinarius_traganus.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 275,
+                            Jadalny = false,
+                            Nazwa = "Rycerzyk oliwkowożółty",
+                            Opis = "Prześliczna jasnożółta, pękata i łuskowana głowa porastająca omszone mocno sosnowe kłody w głuszy na bagnach wydzielająca rzewny sosnowy cierpki aromat starych lasów.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Tricholomopsis_decora.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 276,
+                            Jadalny = true,
+                            Nazwa = "Gąsówka płowa",
+                            Opis = "Delikatnie pomarańczowawa forma gąsówki rosnąca rzędowo której charakterystyczny wygląd zakłócają drobne wypryskane, zeszklone krople na pofalowanym skraju jej głowy.",
+                            Rodzina = "Gąskowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Lepista_gilva.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 277,
+                            Jadalny = true,
+                            Nazwa = "Muchomor szyszkowaty",
+                            Opis = "Monumentalny i mięsisty jasny muchomor całkowicie od dołu opancerzony ostrymi wielkimi sterczącymi kwadratowymi gładkimi kanciastymi łatami rzadko spotykanymi u bliskich trujących muchomorów.",
+                            Rodzina = "Muchomorowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Amanita_strobiliformis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 278,
+                            Jadalny = false,
+                            Nazwa = "Żagiew zimowa",
+                            Opis = "Elegancki symetryczny chropowaty czarnobrązowy mały kapelusik opadający na drobnych rureczkach stojąc prosto na białym wąziutkim twardym stelażu u samych stóp suchych gałęzi na przedwiośniu.",
+                            Rodzina = "Żagwiowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Polyporus_brumalis.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 279,
+                            Jadalny = false,
+                            Nazwa = "Włośnianka rzodkiewkowata",
+                            Opis = "Rzadkość z potężnym podziemnym korzeniem przypominającym rzodkiew schodzącym ekstremalnie w dół nierzadko wiążącym się w gniazdach podziemnych żerowisk lub latryn leśnych u gryzoni i nornic.",
+                            Rodzina = "Hymenogastracae",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Hebeloma_radicosum.jpg?width=800"
+                        },
+                        new
+                        {
+                            Id = 280,
+                            Jadalny = false,
+                            Nazwa = "Próchnilec maczugowaty",
+                            Opis = "Nazywany potocznie palcami umarlaka. Te twarde, zwęglone na kamień smolisto czarne maczugi wyłaniają się z pniaków, drastycznie upodabniając się do poczerniałych kończyn dłoni wygrzebujących się w gnijącym mchu z grobowca.",
+                            Rodzina = "Próchnilcowate",
+                            ZdjecieUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Xylaria_polymorpha.jpg?width=800"
                         });
                 });
 

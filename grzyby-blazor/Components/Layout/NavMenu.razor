@@ -1,6 +1,9 @@
-﻿<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+﻿@using Microsoft.AspNetCore.Identity
+@using grzyby.Models
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="">ATLAS GRZYBÓW</a>
+        <a class="navbar-brand fw-bold text-forest" href="">Forum Grzybów 🍄</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -10,34 +13,37 @@
             <!-- Linki z lewej strony -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item px-2">
-                    <NavLink class="nav-link text-dark" href="" Match="NavLinkMatch.All">Home</NavLink>
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
                 </li>
                 <li class="nav-item px-2">
-                    <NavLink class="nav-link text-dark" href="wiki">Atlas</NavLink>
+                    <NavLink class="nav-link" href="wiki">Wiki</NavLink>
+                </li>
+                <li class="nav-item px-2">
+                    <NavLink class="nav-link" href="forum">Forum</NavLink>
                 </li>
             </ul>
 
-            <!-- Zmiana stanu w zależności od zalogowania (Prawa strona) -->
+            <!-- Prawa strona -->
             <ul class="navbar-nav ms-auto align-items-center">
                 <AuthorizeView>
                     <Authorized>
                         <li class="nav-item px-2">
-                            <span class="nav-link text-muted">Zalogowano jako <strong class="text-dark">@context.User.Identity?.Name</strong></span>
+                            <span class="nav-link text-muted">Zalogowano jako <strong class="text-chocolate">@context.User.Identity?.Name</strong></span>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <form action="/logout" method="post">
-                                <AntiforgeryToken /> <!-- Antiforgery zabezpiecza przycisk przed atakami -->
-                                <button type="submit" class="btn btn-outline-danger rounded-pill px-4">Wyloguj</button>
+                            <form action="/logout" method="post" class="d-inline">
+                                <AntiforgeryToken />
+                                <button type="submit" class="btn border-chocolate text-chocolate rounded-pill px-4 transition-hover">Wyloguj</button>
                             </form>
                         </li>
                     </Authorized>
                     
                     <NotAuthorized>
                         <li class="nav-item px-2">
-                            <NavLink class="nav-link text-dark fw-bold" href="login">Zaloguj</NavLink>
+                            <NavLink class="nav-link fw-bold text-chocolate" href="login">Zaloguj</NavLink>
                         </li>
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-dark rounded-pill px-4" href="register">Rejestracja</a>
+                            <a class="btn bg-forest rounded-pill px-4 transition-hover" href="register">Rejestracja</a>
                         </li>
                     </NotAuthorized>
                 </AuthorizeView>

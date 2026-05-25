@@ -2,7 +2,12 @@
 @using grzyby.Data
 @using grzyby.Models
 @using Microsoft.EntityFrameworkCore
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Components.Authorization
 @inject ApplicationDbContext Db
+@inject UserManager<User> UserManager
+@inject AuthenticationStateProvider AuthStateProvider
 
 <PageTitle>@(wpis?.Tytul ?? "Wpis nie znaleziony")</PageTitle>
 
@@ -10,78 +15,125 @@
     @if (wpis == null)
     {
         <div class="text-center py-5">
-            <h3 class="text-muted">Nie znaleziono takiego wpisu.</h3>
-            <a href="/forum" class="btn btn-dark rounded-pill mt-3">Wróć do forum</a>
+            <h1 class="display-1 text-muted mb-3">🍂</h1>
+            <h3 class="fw-bold text-chocolate">Nie znaleziono takiego wpisu.</h3>
+            <a href="/forum" class="btn bg-forest rounded-pill mt-3 px-4 py-2 transition-hover">Wróć do forum</a>
         </div>
     }
     else
     {
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <!-- Nawigacja -->
                 <div class="mb-4">
-                    <a href="/forum" class="text-muted text-decoration-none small">&laquo; Powrót do forum</a>
+                    <a href="/forum" class="btn btn-sm bg-white text-muted rounded-pill px-3 py-2 fw-bold shadow-sm transition-hover">
+                        &larr; Wróć do forum
+                    </a>
                 </div>
                 
-                <!-- Tytuł -->
-                <h1 class="fw-bold mb-3">@wpis.Tytul</h1>
-                
-                <!-- Informacje o autorze -->
-                <div class="d-flex align-items-center mb-4 text-muted small border-bottom pb-4">
-                    <div class="bg-light rounded-circle d-flex justify-content-center align-items-center fw-bold text-dark me-2" style="width: 40px; height: 40px;">
-                        @(string.IsNullOrEmpty(wpis.Author?.UserName) ? "?" : wpis.Author.UserName.Substring(0, 1).ToUpper())
-                    </div>
-                    <div>
-                        <strong class="text-dark d-block">@(wpis.Author?.UserName ?? "Usunięty użytkownik")</strong>
-                        @wpis.DataDodania.ToString("dd MMMM yyyy, HH:mm")
-                    </div>
-                </div>
-
-                <!-- Treść Wpisu -->
-                <div class="fs-5 lh-lg text-secondary mb-5" style="white-space: pre-wrap;">
-                    @wpis.Tresc
-                </div>
-
-                <!-- Sekcja Komentarzy -->
-                <div class="bg-light rounded-4 p-4 p-md-5 mt-5">
-                    <h4 class="fw-bold mb-4">Komentarze (@wpis.Komentarze.Count)</h4>
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 mb-5 bg-white">
+                    <h1 class="fw-bold mb-4 text-chocolate" style="letter-spacing: -0.5px;">@wpis.Tytul</h1>
                     
+                    <div class="d-flex align-items-center mb-4 pb-4 border-bottom">
+                        <div class="bg-forest rounded-circle d-flex justify-content-center align-items-center fw-bold me-3 shadow-sm" style="width: 48px; height: 48px; font-size: 1.2rem;">
+                            @(string.IsNullOrEmpty(wpis.Author?.UserName) ? "?" : wpis.Author.UserName.Substring(0, 1).ToUpper())
+                        </div>
+                        <div>
+                            <strong class="text-chocolate d-block fs-5">@(wpis.Author?.UserName ?? "Usunięty użytkownik")</strong>
+                            <span class="text-muted small">Wysłano: @wpis.DataDodania.ToString("dd MMMM yyyy, HH:mm")</span>
+                        </div>
+                    </div>
+
+                    <div style="font-size: 1.15rem; line-height: 1.7; color: #333; white-space: pre-wrap;">
+                        @wpis.Tresc
+                    </div>
+                </div>
+
+                <h4 class="fw-bold mb-4 d-flex align-items-center gap-2 text-chocolate">
+                    Komentarze 
+                    <span class="badge bg-caramel rounded-pill">@wpis.Komentarze.Count</span>
+                </h4>
+                
+                <div class="mb-5">
                     @if (!wpis.Komentarze.Any())
                     {
-                        <p class="text-muted mb-0">Nikt jeszcze nie skomentował tego wpisu.</p>
+                        <div class="alert alert-light border-0 rounded-4 p-4 text-center text-muted">
+                            Nikt jeszcze nie skomentował tego wpisu. Podziel się swoimi myślami!
+                        </div>
                     }
                     else
                     {
-                        /* POPRAWIONA LITERÓWKA: "in" zamiast "w" */
                         @foreach (var kom in wpis.Komentarze.OrderBy(k => k.DataDodania))
                         {
-                            <div class="mb-3 border-bottom pb-3">
-                                <strong class="text-dark">@(kom.Author?.UserName ?? "Nieznany")</strong>
-                                <span class="text-muted small ms-2">@kom.DataDodania.ToString("dd.MM.yyyy HH:mm")</span>
-                                <p class="mt-2 mb-0 text-secondary">@kom.Tresc</p>
+                            <div class="bg-white border-start border-4 border-golden rounded-4 p-4 mb-3 shadow-sm">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <strong class="text-olive">@(kom.Author?.UserName ?? "Nieznany")</strong>
+                                    <span class="text-muted small">@kom.DataDodania.ToString("dd.MM.yyyy HH:mm")</span>
+                                </div>
+                                <p class="mt-1 mb-0 text-dark" style="white-space: pre-wrap;">@kom.Tresc</p>
                             </div>
                         }
                     }
                 </div>
+
+                <AuthorizeView>
+                    <Authorized>
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <EditForm Model="Input" method="post" FormName="KomentarzForm" OnValidSubmit="DodajKomentarz" Context="editContext">
+                                <DataAnnotationsValidator />
+                                <div class="mb-3">
+                                    <label class="form-label text-chocolate fw-bold">Dołącz do dyskusji</label>
+                                    <InputTextArea @bind-Value="Input.Tresc" class="form-control bg-light p-3 border-0" rows="3" placeholder="Napisz, co o tym myślisz..." />
+                                    <ValidationMessage For="() => Input.Tresc" class="text-danger small mt-1" />
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn bg-forest rounded-pill px-4 py-2 fw-bold transition-hover">Dodaj odpowiedź</button>
+                                </div>
+                            </EditForm>
+                        </div>
+                    </Authorized>
+                    <NotAuthorized>
+                        <div class="card border-0 border-start border-4 border-golden rounded-4 p-4 bg-light text-center">
+                            <p class="mb-2 text-muted">Musisz być zalogowany, aby dodać komentarz.</p>
+                            <a href="/login" class="btn bg-forest rounded-pill px-4 mt-2 d-inline-block transition-hover">Zaloguj się</a>
+                        </div>
+                    </NotAuthorized>
+                </AuthorizeView>
             </div>
         </div>
     }
 </div>
 
 @code {
-    [Parameter]
-    public int Id { get; set; }
-
+    [Parameter] public int Id { get; set; }
     private Wpis? wpis;
+
+    [SupplyParameterFromForm]
+    public NowyKomentarzModel Input { get; set; } = default!;
 
     protected override async Task OnInitializedAsync()
     {
-        // Pobieramy wpis wraz z danymi autora i powiązanymi komentarzami
-        wpis = await Db.Wpisy
-            .Include(w => w.Author)
-            .Include(w => w.Komentarze)
-                .ThenInclude(k => k.Author) // Dołączamy autorów komentarzy
-            .AsNoTracking()
-            .FirstOrDefaultAsync(w => w.Id == Id);
+        Input ??= new NowyKomentarzModel();
+        await ZaladujWpis();
     }
+
+    private async Task ZaladujWpis()
+    {
+        wpis = await Db.Wpisy.Include(w => w.Author).Include(w => w.Komentarze).ThenInclude(k => k.Author).AsNoTracking().FirstOrDefaultAsync(w => w.Id == Id);
+    }
+
+    private async Task DodajKomentarz()
+    {
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        var user = await UserManager.GetUserAsync(authState.User);
+        if (user != null && wpis != null)
+        {
+            var nowyKomentarz = new Komentarz { Tresc = Input.Tresc, DataDodania = DateTime.UtcNow, WpisId = this.Id, AuthorId = user.Id };
+            Db.Add(nowyKomentarz);
+            await Db.SaveChangesAsync();
+            Input = new NowyKomentarzModel();
+            await ZaladujWpis();
+        }
+    }
+
+    public class NowyKomentarzModel { [Required(ErrorMessage = "Komentarz nie może być pusty.")] public string Tresc { get; set; } = ""; }
 }

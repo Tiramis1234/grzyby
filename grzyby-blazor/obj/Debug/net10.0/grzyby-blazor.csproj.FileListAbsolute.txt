@@ -180,7 +180,6 @@ C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\ref\grzyby-blazor.
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\compressed\967fk70c75-{0}-1wubvt17hn-1wubvt17hn.gz
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\compressed\2l3x4pre26-{0}-1wubvt17hn-1wubvt17hn.gz
-C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\compressed\v7qf34hr84-{0}-b4ckiww99r-b4ckiww99r.gz
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\Microsoft.Build.Framework.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
@@ -200,3 +199,4 @@ C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\tr\Microsoft.CodeA
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\grzyby-blazor.sourcelink.json
+C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\compressed\v7qf34hr84-{0}-mx7nqghwau-mx7nqghwau.gz

@@ -6,20 +6,22 @@
 
 <PageTitle>Forum Grzybiarzy</PageTitle>
 
-<div class="container py-4">
-    <div class="d-flex justify-content-between align-items-center mb-5">
+<div class="container py-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5 gap-3">
         <div>
-            <h1 class="display-5 fw-bold text-dark mb-0">Forum Grzybiarzy</h1>
-            <p class="text-muted mt-2">Dziel się swoimi znaleziskami i zadawaj pytania.</p>
+            <h1 class="display-5 fw-bold text-chocolate mb-0">
+                Forum Grzybiarzy 🌲
+            </h1>
+            <p class="text-muted mt-2 fs-5">Dziel się swoimi znaleziskami i zadawaj pytania.</p>
         </div>
         <AuthorizeView>
             <Authorized>
-                <a href="/forum/nowy" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">
-                    + Nowy Wpis
+                <a href="/forum/nowy" class="btn bg-forest rounded-pill px-4 py-3 fw-bold shadow-sm transition-hover">
+                    <span class="fs-5 me-1">+</span> Nowy Wpis
                 </a>
             </Authorized>
             <NotAuthorized>
-                <a href="/login" class="btn btn-outline-dark rounded-pill px-4 py-2">
+                <a href="/login" class="btn bg-white border-chocolate text-chocolate rounded-pill px-4 py-2 fw-bold shadow-sm transition-hover">
                     Zaloguj się, aby napisać
                 </a>
             </NotAuthorized>
@@ -28,12 +30,16 @@
 
     @if (wpisy is null)
     {
-        <div class="text-center py-5 text-muted">Ładowanie forum...</div>
+        <div class="d-flex justify-content-center py-5">
+            <div class="spinner-border text-olive" role="status"></div>
+        </div>
     }
     else if (!wpisy.Any())
     {
-        <div class="alert alert-light text-center border rounded-4 py-5">
-            <h5 class="text-muted">Jeszcze nikt nic nie napisał. Bądź pierwszy!</h5>
+        <div class="alert bg-white text-center border-0 shadow-sm rounded-4 py-5 mt-4">
+            <h2 class="mb-3">🍄</h2>
+            <h4 class="text-chocolate fw-bold">Pusto w lesie...</h4>
+            <p class="text-muted mb-0">Jeszcze nikt nic nie napisał. Przetrzyj szlaki i bądź pierwszy!</p>
         </div>
     }
     else
@@ -42,20 +48,28 @@
             @foreach (var wpis in wpisy)
             {
                 <div class="col-12">
-                    <a href="/forum/@wpis.Id" class="text-decoration-none text-dark">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 transition-hover">
-                            <h4 class="fw-bold mb-2">@wpis.Tytul</h4>
-                            <p class="text-secondary mb-3 text-truncate">
+                    <a href="/forum/@wpis.Id" class="text-decoration-none text-dark d-block">
+                        <div class="card border-0 border-start border-4 border-transparent shadow-sm rounded-4 p-4 transition-hover" style="border-left-color: transparent;" onmouseover="this.style.borderLeftColor='#436A36'" onmouseout="this.style.borderLeftColor='transparent'">
+                            <h4 class="fw-bold mb-2 text-chocolate">@wpis.Tytul</h4>
+                            <p class="text-secondary mb-4 text-truncate" style="max-width: 90%;">
                                 @wpis.Tresc
                             </p>
-                            <div class="d-flex justify-content-between text-muted small">
-                                <span>
-                                    <strong class="text-dark">@(wpis.Author?.UserName ?? "Nieznany")</strong> 
-                                    • @wpis.DataDodania.ToString("dd.MM.yyyy HH:mm")
-                                </span>
-                                <span>
-                                    Komentarze: @wpis.Komentarze.Count
-                                </span>
+                            
+                            <div class="d-flex flex-wrap justify-content-between align-items-center text-muted small mt-auto">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-golden rounded-circle d-flex justify-content-center align-items-center fw-bold text-white" style="width: 32px; height: 32px;">
+                                        @(string.IsNullOrEmpty(wpis.Author?.UserName) ? "?" : wpis.Author.UserName.Substring(0, 1).ToUpper())
+                                    </div>
+                                    <span>
+                                        <strong class="text-forest">@(wpis.Author?.UserName ?? "Nieznany")</strong> 
+                                        <span class="mx-1">•</span> @wpis.DataDodania.ToString("dd.MM.yyyy, HH:mm")
+                                    </span>
+                                </div>
+                                <div class="mt-3 mt-md-0">
+                                    <span class="badge rounded-pill px-3 py-2 text-chocolate border-golden" style="background-color: rgba(178, 148, 87, 0.15); border: 1px solid;">
+                                        💬 Komentarze: @wpis.Komentarze.Count
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -70,12 +84,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Pobieramy wpisy wraz z danymi autora i ilością komentarzy
-        wpisy = await Db.Wpisy
-            .Include(w => w.Author)
-            .Include(w => w.Komentarze)
-            .OrderByDescending(w => w.DataDodania)
-            .AsNoTracking()
-            .ToListAsync();
+        wpisy = await Db.Wpisy.Include(w => w.Author).Include(w => w.Komentarze).OrderByDescending(w => w.DataDodania).AsNoTracking().ToListAsync();
     }
 }

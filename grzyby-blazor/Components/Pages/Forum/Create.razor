@@ -15,28 +15,30 @@
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
-                <h2 class="fw-bold mb-4">Utwórz nowy wpis</h2>
+            <div class="card border-0 shadow rounded-4 p-4 p-md-5 bg-white">
+                <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                    <span class="fs-2 me-3">📝</span>
+                    <h2 class="fw-bold mb-0 text-chocolate">Utwórz nowy wpis</h2>
+                </div>
 
-                <EditForm Model="Input" method="post" OnValidSubmit="DodajWpis" FormName="createPost">
-                    <AntiforgeryToken /> <!-- TO JEST KLUCZOWE -->
+                <EditForm Model="Input" method="post" FormName="NowyWpisForm" OnValidSubmit="DodajWpis">
                     <DataAnnotationsValidator />
 
                     <div class="mb-4">
-                        <label class="form-label text-muted small fw-bold">Tytuł wpisu</label>
-                        <InputText @bind-Value="Input.Tytul" class="form-control form-control-lg bg-light border-0" placeholder="O czym chcesz napisać?" />
-                        <ValidationMessage For="() => Input.Tytul" class="text-danger small mt-1" />
+                        <label class="form-label text-chocolate fw-bold">Tytuł wpisu</label>
+                        <InputText @bind-Value="Input.Tytul" class="form-control form-control-lg bg-light border-0 p-3" placeholder="Zaciekaw innych swoim tytułem..." />
+                        <ValidationMessage For="() => Input.Tytul" class="text-danger small mt-2 fw-bold" />
                     </div>
 
-                    <div class="mb-4">
-                        <label class="form-label text-muted small fw-bold">Treść</label>
-                        <InputTextArea @bind-Value="Input.Tresc" class="form-control bg-light border-0" rows="8" placeholder="Rozpisz się tutaj..." />
-                        <ValidationMessage For="() => Input.Tresc" class="text-danger small mt-1" />
+                    <div class="mb-5">
+                        <label class="form-label text-chocolate fw-bold">Treść</label>
+                        <InputTextArea @bind-Value="Input.Tresc" class="form-control bg-light border-0 p-3" rows="10" placeholder="Rozpisz się tutaj... Podziel się relacją z grzybobrania lub zadaj pytanie." />
+                        <ValidationMessage For="() => Input.Tresc" class="text-danger small mt-2 fw-bold" />
                     </div>
 
-                    <div class="d-flex justify-content-end gap-3">
-                        <a href="/forum" class="btn btn-light rounded-pill px-4">Anuluj</a>
-                        <button type="submit" class="btn btn-dark rounded-pill px-5 fw-bold">Opublikuj</button>
+                    <div class="d-flex justify-content-end align-items-center gap-3 mt-4 pt-3 border-top">
+                        <a href="/forum" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-caramel">Anuluj</a>
+                        <button type="submit" class="btn bg-forest rounded-pill px-5 py-2 fw-bold shadow-sm transition-hover">Opublikuj na forum</button>
                     </div>
                 </EditForm>
             </div>
@@ -45,43 +47,25 @@
 </div>
 
 @code {
-    [SupplyParameterFromForm]
-    private WpisModel Input { get; set; } = default!;
-
-    protected override void OnInitialized()
-    {
-        Input ??= new WpisModel();
-    }
+    [SupplyParameterFromForm] public WpisModel Input { get; set; } = default!;
+    protected override void OnInitialized() { Input ??= new WpisModel(); }
 
     private async Task DodajWpis()
     {
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
         var user = await UserManager.GetUserAsync(authState.User);
-
         if (user != null)
         {
-            var nowyWpis = new Wpis
-            {
-                Tytul = Input.Tytul,
-                Tresc = Input.Tresc,
-                DataDodania = DateTime.UtcNow,
-                AuthorId = user.Id
-            };
-
+            var nowyWpis = new Wpis { Tytul = Input.Tytul, Tresc = Input.Tresc, DataDodania = DateTime.UtcNow, AuthorId = user.Id };
             Db.Wpisy.Add(nowyWpis);
             await Db.SaveChangesAsync();
-
             Navigation.NavigateTo("/forum");
         }
     }
 
     public class WpisModel
     {
-        [Required(ErrorMessage = "Podaj tytuł")]
-        [StringLength(100, ErrorMessage = "Tytuł może mieć max 100 znaków")]
-        public string Tytul { get; set; } = "";
-
-        [Required(ErrorMessage = "Wpisz jakąś treść")]
-        public string Tresc { get; set; } = "";
+        [Required(ErrorMessage = "Podaj tytuł")] [StringLength(100)] public string Tytul { get; set; } = "";
+        [Required(ErrorMessage = "Wpisz jakąś treść")] public string Tresc { get; set; } = "";
     }
 }

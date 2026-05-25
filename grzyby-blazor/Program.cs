@@ -17,6 +17,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // 3. Konfiguracja autoryzacji i stanu
 builder.Services.AddCascadingAuthenticationState();
 
+builder.Services.AddAntiforgery();
+
 builder.Services.AddAuthentication(options =>
     {
         options.DefaultScheme = IdentityConstants.ApplicationScheme;
@@ -56,11 +58,13 @@ app.UseAntiforgery(); // Musi być pod autoryzacją
 app.MapRazorComponents<grzyby.Components.App>()
     .AddInteractiveServerRenderMode();
 
-// 6. Endpoint do wylogowywania
+// 6. Endpoint do wylogowywania (wywoływany z formularza w navbarze)
 app.MapPost("/logout", async (SignInManager<User> signInManager) =>
 {
     await signInManager.SignOutAsync();
     return Results.Redirect("/");
 });
+
+
 
 app.Run();

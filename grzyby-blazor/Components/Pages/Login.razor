@@ -9,35 +9,41 @@
 
 <div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-5">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
-                <h2 class="fw-bold text-center mb-4">Witaj ponownie</h2>
+        <div class="col-md-7 col-lg-5">
+            <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+                <div class="text-center mb-4">
+                    <span class="display-4">👋</span>
+                    <h2 class="fw-bold mt-2 text-chocolate">Witaj ponownie</h2>
+                    <p class="text-muted">Zaloguj się, aby kontynuować</p>
+                </div>
 
                 @if (!string.IsNullOrEmpty(ErrorMessage))
                 {
-                    <div class="alert alert-danger rounded-3">@ErrorMessage</div>
+                    <div class="alert alert-danger rounded-4 shadow-sm border-0 fw-bold text-center">@ErrorMessage</div>
                 }
 
-                <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="loginForm">
-                    <AntiforgeryToken /> <!-- TO JEST KLUCZOWE -->
+                <EditForm Model="Input" method="post" FormName="LoginForm" OnValidSubmit="LoginUser">
                     <DataAnnotationsValidator />
 
-                    <div class="mb-3">
-                        <label class="form-label text-muted small">Adres E-mail</label>
-                        <InputText @bind-Value="Input.Email" class="form-control form-control-lg bg-light border-0" placeholder="Wpisz e-mail" />
-                        <ValidationMessage For="() => Input.Email" class="text-danger small mt-1" />
-                    </div>
-
                     <div class="mb-4">
-                        <label class="form-label text-muted small">Hasło</label>
-                        <InputText @bind-Value="Input.Password" type="password" class="form-control form-control-lg bg-light border-0" placeholder="Wpisz hasło" />
-                        <ValidationMessage For="() => Input.Password" class="text-danger small mt-1" />
+                        <label class="form-label text-chocolate small fw-bold text-uppercase">Adres E-mail</label>
+                        <InputText @bind-Value="Input.Email" class="form-control form-control-lg bg-light border-0 p-3 rounded-3" placeholder="nazwa@email.com" />
+                        <ValidationMessage For="() => Input.Email" class="text-danger small mt-1 fw-bold" />
                     </div>
 
-                    <button type="submit" class="btn btn-dark btn-lg w-100 rounded-pill fw-bold">Zaloguj się</button>
+                    <div class="mb-5">
+                        <label class="form-label text-chocolate small fw-bold text-uppercase">Hasło</label>
+                        <InputText @bind-Value="Input.Password" type="password" class="form-control form-control-lg bg-light border-0 p-3 rounded-3" placeholder="••••••••" />
+                        <ValidationMessage For="() => Input.Password" class="text-danger small mt-1 fw-bold" />
+                    </div>
 
-                    <div class="text-center mt-4 text-muted small">
-                        Nie masz konta? <a href="/register" class="text-dark fw-bold text-decoration-none">Zarejestruj się</a>
+                    <button type="submit" class="btn bg-forest btn-lg w-100 rounded-pill fw-bold py-3 shadow-sm transition-hover">
+                        Zaloguj się
+                    </button>
+
+                    <div class="text-center mt-4 text-muted pt-3 border-top">
+                        Nie masz jeszcze konta? <br>
+                        <a href="/register" class="text-golden fw-bold text-decoration-none mt-2 d-inline-block transition-hover">Zarejestruj się za darmo</a>
                     </div>
                 </EditForm>
             </div>
@@ -46,37 +52,20 @@
 </div>
 
 @code {
-    [SupplyParameterFromForm]
-    private LoginModel Input { get; set; } = default!;
-
+    [SupplyParameterFromForm] public LoginModel Input { get; set; } = default!;
     private string? ErrorMessage;
-
-    protected override void OnInitialized()
-    {
-        Input ??= new LoginModel();
-    }
+    protected override void OnInitialized() { Input ??= new LoginModel(); }
 
     private async Task LoginUser()
     {
         var result = await SignInManager.PasswordSignInAsync(Input.Email, Input.Password, isPersistent: true, lockoutOnFailure: false);
-
-        if (result.Succeeded)
-        {
-            Navigation.NavigateTo("/", forceLoad: true);
-        }
-        else
-        {
-            ErrorMessage = "Nieprawidłowy e-mail lub hasło.";
-        }
+        if (result.Succeeded) Navigation.NavigateTo("/", forceLoad: true);
+        else ErrorMessage = "Nieprawidłowy e-mail lub hasło.";
     }
 
     public class LoginModel
     {
-        [Required(ErrorMessage = "Email jest wymagany")]
-        [EmailAddress(ErrorMessage = "Zły format e-mail")]
-        public string Email { get; set; } = "";
-
-        [Required(ErrorMessage = "Hasło jest wymagane")]
-        public string Password { get; set; } = "";
+        [Required(ErrorMessage = "Email jest wymagany")] [EmailAddress] public string Email { get; set; } = "";
+        [Required(ErrorMessage = "Hasło jest wymagane")] public string Password { get; set; } = "";
     }
 }
