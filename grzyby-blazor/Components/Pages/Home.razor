@@ -1,57 +1,234 @@
 ﻿@page "/"
+@using grzyby.Data
+@using grzyby.Models
+@using Microsoft.EntityFrameworkCore
+@inject ApplicationDbContext Db
 
 <PageTitle>Strona Główna - Atlas Grzybów</PageTitle>
 
-<div class="container py-4">
-    <!-- Hero Section -->
-    <div class="text-center shadow-sm rounded-4" style="background: linear-gradient(135deg, #f2f5f1 0%, #e6ece4 100%); padding: 5rem 2rem; margin-bottom: 4rem; border: 1px solid rgba(67, 106, 54, 0.15);">
-        <span class="display-1 d-block mb-3">🍄🌲</span>
-        <h1 class="display-4 fw-bold text-chocolate mb-4" style="letter-spacing: -1px;">
-            Witaj! <br>
-        </h1>
-        <p class="lead text-secondary mb-5 mx-auto" style="max-width: 750px; line-height: 1.8;">
-            Twoje wirtualne kompendium wiedzy o grzybach polskich lasów. Odkrywaj nowe gatunki, dziel się swoimi zbiorami i rozmawiaj z innymi pasjonatami grzybobrania.
-        </p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-           <a href="/wiki" class="btn border-chocolate text-chocolate bg-white rounded-pill px-5 py-3 fw-bold transition-hover">
-                Przeglądaj Atlas
-            </a>
-            <a href="/forum" class="btn border-chocolate text-chocolate bg-white rounded-pill px-5 py-3 fw-bold transition-hover">
-                Wejdź na Forum
-            </a>
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-blob1"></div>
+    <div class="hero-blob2"></div>
+    <div class="hero-inner">
+        <div>
+            <div class="eyebrow">Polski atlas grzybów</div>
+            <h1 class="hero-title">Gdzie grzybiarze <em>znajdują wspólny język.</em></h1>
+            <p class="hero-desc">
+                Ciche zakątki internetu dla ludzi, którzy naprawdę dbają o grzyby &mdash;
+                od poszukiwań kurek w jesiennym deszczu po hodowlę boczniaka na kuchennej półce.
+            </p>
+            <div class="cta-row">
+                <a href="/forum" class="btn-primary-custom">Założ wątek &rarr;</a>
+                <a href="/wiki" class="btn-ghost">Przeglądaj atlas</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">@(memberCount > 0 ? memberCount.ToString("N0") : "...")</div>
+                    <div class="stat-lbl">Użytkowników</div>
+                </div>
+                <div>
+                    <div class="stat-num">@(postCount > 0 ? postCount.ToString("N0") : "...")</div>
+                    <div class="stat-lbl">Wpisów</div>
+                </div>
+                <div>
+                    <div class="stat-num">@(speciesCount > 0 ? speciesCount.ToString("N0") : "...")</div>
+                    <div class="stat-lbl">Gatunków</div>
+                </div>
+            </div>
+        </div>
+        <div class="spore-grid">
+            @{
+                var featured = recentPosts?.Take(3).ToList();
+                var tall = featured?.Count > 0 ? featured[0] : null;
+                var small = featured?.Skip(1).Take(2).ToList();
+            }
+            @if (tall is not null)
+            {
+                <a href="/forum/@tall.Id" class="sc tall">
+                    <div class="sc-icon clay"><i class="bi bi-chat-dots"></i></div>
+                    <div class="sc-title">@tall.Tytul</div>
+                    <div class="sc-body">@Truncate(tall.Tresc, 80)</div>
+                    <div class="sc-meta">@tall.Komentarze.Count odpowiedzi · @tall.DataDodania.ToString("g")</div>
+                </a>
+            }
+            @if (small is not null)
+            {
+                foreach (var s in small)
+                {
+                    <a href="/forum/@s.Id" class="sc">
+                        <div class="sc-icon sage"><i class="bi bi-chat"></i></div>
+                        <div class="sc-title">@Truncate(s.Tytul, 40)</div>
+                        <div class="sc-meta">@s.Komentarze.Count odpowiedzi</div>
+                    </a>
+                }
+            }
         </div>
     </div>
+</section>
 
-    <!-- Features -->
-    <div class="row g-4 mb-5">
-        <div class="col-md-4">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 text-center transition-hover h-100">
-                <div class="rounded-4 mx-auto mb-4 d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-size: 2.2rem; background-color: rgba(67, 106, 54, 0.15);">
-                    <span class="text-olive">🌿</span>
-                </div>
-                <h4 class="fw-bold mb-3 text-chocolate">Ogromny Atlas</h4>
-                <p class="text-muted mb-0 lh-lg">Poznaj setki gatunków grzybów. Dowiedz się, które są najsmaczniejsze, a których bezwzględnie unikać.</p>
-            </div>
-        </div>
-        
-        <div class="col-md-4">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 text-center transition-hover h-100">
-                <div class="rounded-4 mx-auto mb-4 d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-size: 2.2rem; background-color: rgba(178, 148, 87, 0.15);">
-                    <span class="text-golden">👥</span>
-                </div>
-                <h4 class="fw-bold mb-3 text-chocolate">Aktywne Forum</h4>
-                <p class="text-muted mb-0 lh-lg">Znalazłeś nietypowego grzyba? Chcesz pochwalić się koszem prawdziwków? Społeczność czeka!</p>
+<!-- Main content -->
+<div class="main-wrap">
+    <main>
+        <div class="pin">
+            <i class="bi bi-pin-angle" style="color:var(--ccl); font-size:1rem; flex-shrink:0;"></i>
+            <div>
+                <strong>Grzby są Super</strong>
+                <a href="/wiki">wiki &rarr;</a>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 text-center transition-hover h-100">
-                <div class="rounded-4 mx-auto mb-4 d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px; font-size: 2.2rem; background-color: rgba(152, 110, 52, 0.15);">
-                    <span class="text-caramel">⭐</span>
+        <div class="section-lbl">Ostatnie dyskusje</div>
+
+        @if (recentPosts is null)
+        {
+            <div style="text-align:center;padding:32px 0;color:var(--cu);font-size:0.82rem;">Ładowanie...</div>
+        }
+        else if (!recentPosts.Any())
+        {
+            <div style="text-align:center;padding:24px 0;color:var(--cu);">
+                <div style="font-size:2rem;margin-bottom:6px;">🍄</div>
+                <div style="font-family:var(--fs);font-size:0.9rem;">Pusto w lesie... bądź pierwszy!</div>
+            </div>
+        }
+        else
+        {
+            @foreach (var wpis in recentPosts)
+            {
+                var initial = string.IsNullOrEmpty(wpis.Author?.UserName) ? "?" : wpis.Author.UserName.Substring(0, 1).ToUpper();
+                var avClass = wpis.Id % 3 == 0 ? "s" : (wpis.Id % 3 == 1 ? "c" : "u");
+                <div class="thread">
+                    <div class="av @avClass">@initial</div>
+                    <div>
+                        <a href="/forum/@wpis.Id" class="t-title">@wpis.Tytul</a>
+                        <div class="t-meta">
+                            <span>@(wpis.Author?.UserName ?? "Nieznany")</span>
+                            <span>·</span>
+                            <span>@wpis.DataDodania.ToString("g")</span>
+                        </div>
+                    </div>
+                    <div class="t-stat">
+                        <div class="t-num">@wpis.Komentarze.Count</div>
+                        <div class="t-lbl">odpowiedzi</div>
+                    </div>
                 </div>
-                <h4 class="fw-bold mb-3 text-chocolate">Społeczność</h4>
-                <p class="text-muted mb-0 lh-lg">Zarejestruj się, aby móc komentować i tworzyć własne wątki. Zbuduj swój profil na naszym portalu.</p>
+            }
+            <div class="load-more">
+                <a href="/forum" class="btn-ghost" style="display:inline-flex;">Zobacz wszystkie wątki ↓</a>
+            </div>
+        }
+    </main>
+
+    <aside class="sidebar">
+        <div class="widget">
+            <div class="wh">W sezonie teraz</div>
+            <div class="wb">
+                <div class="season-card" style="background:var(--cs)">
+                    <div class="season-lbl" style="color:var(--cm)">Kwiecień–Czerwiec</div>
+                    <div class="season-title">Pieczarka polna</div>
+                    <div class="season-desc">Agaricus campestris &mdash; łąki, pastwiska, przydroża.</div>
+                </div>
+                <div class="season-card" style="background:var(--ccll)">
+                    <div class="season-lbl" style="color:var(--ccl)">Kwiecień–Maj</div>
+                    <div class="season-title">Smażka</div>
+                    <div class="season-desc">Krótkie okno &mdash; wydmy, sady i tereny po pożarach.</div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="widget">
+            <div class="wh">Kategorie grzybów</div>
+            <div class="wb" style="padding:4px 12px">
+                @if (families is not null)
+                {
+                    @foreach (var f in families)
+                    {
+                        <div class="cat-item">
+                            <div class="cat-left">
+                                <span class="cat-dot" style="background:var(--ccl)"></span>
+                                @f.Nazwa
+                            </div>
+                            <span class="cat-count">@f.Liczba</span>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </aside>
 </div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <div class="fb">Atlas Grzybów</div>
+            
+        </div>
+        <div>
+            <div class="fc-title">Przewodnik</div>
+            <ul class="fl">
+                <li><a href="/wiki">Atlas grzybów</a></li>
+                <li><a href="/wiki">Wyszukiwarka</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="fc-title">Społeczność</div>
+            <ul class="fl">
+                <li><a href="/forum">Forum</a></li>
+                <li><a href="/register">Rejestracja</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Atlas Grzybów</span>
+    </div>
+</footer>
+
+@code {
+    private int memberCount;
+    private int postCount;
+    private int speciesCount;
+    private List<Wpis>? recentPosts;
+    private List<RodzinaGroup>? families;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var memberTask = Db.Users.CountAsync();
+        var postTask = Db.Wpisy.CountAsync();
+        var speciesTask = Db.Grzyby.CountAsync();
+        var postsTask = Db.Wpisy
+            .Include(w => w.Author)
+            .Include(w => w.Komentarze)
+            .OrderByDescending(w => w.DataDodania)
+            .Take(6)
+            .AsNoTracking()
+            .ToListAsync();
+        var familiesTask = Db.Grzyby
+            .GroupBy(g => g.Rodzina)
+            .Select(g => new RodzinaGroup { Nazwa = g.Key, Liczba = g.Count() })
+            .OrderByDescending(f => f.Liczba)
+            .Take(5)
+            .AsNoTracking()
+            .ToListAsync();
+
+        await Task.WhenAll(memberTask, postTask, speciesTask, postsTask, familiesTask);
+
+        memberCount = memberTask.Result;
+        postCount = postTask.Result;
+        speciesCount = speciesTask.Result;
+        recentPosts = postsTask.Result;
+        families = familiesTask.Result;
+    }
+
+    private static string Truncate(string value, int maxLength)
+    {
+        if (string.IsNullOrEmpty(value)) return "";
+        return value.Length <= maxLength ? value : value[..maxLength] + "…";
+    }
+
+    private class RodzinaGroup
+    {
+        public string Nazwa { get; set; } = "";
+        public int Liczba { get; set; }
+    }
+}

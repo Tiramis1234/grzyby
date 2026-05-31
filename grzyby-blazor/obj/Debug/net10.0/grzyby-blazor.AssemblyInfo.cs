@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("grzyby-blazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9678c47d6a793aed252b86e0786fbb8124d44b2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af4a63e3e29cc85024ae920237519dda2b5800fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("grzyby-blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("grzyby-blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

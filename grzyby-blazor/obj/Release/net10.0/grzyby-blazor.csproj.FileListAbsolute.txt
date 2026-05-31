@@ -139,7 +139,6 @@ C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\rjsmcshtml.dswa.
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\scopedcss\Components\Layout\ReconnectModal.razor.rz.scp.css
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\scopedcss\bundle\grzyby-blazor.styles.css
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\scopedcss\projectbundle\grzyby-blazor.bundle.scp.css
-C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\compressed\v7qf34hr84-{0}-h5gv2yfygr-h5gv2yfygr.gz
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\compressed\4vnlv7yern-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\compressed\gkxxlkwt64-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\compressed\7tml2anoyd-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -200,3 +199,5 @@ C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\refint\grzyby-bl
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\grzyby-blazor.pdb
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\grzyby-blazor.genruntimeconfig.cache
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\ref\grzyby-blazor.dll
+C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Release\net10.0\appsettings.Hosting.json
+C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Release\net10.0\compressed\v7qf34hr84-{0}-thwlysh838-thwlysh838.gz

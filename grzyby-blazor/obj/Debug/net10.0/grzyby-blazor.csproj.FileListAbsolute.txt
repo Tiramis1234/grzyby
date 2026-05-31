@@ -199,4 +199,5 @@ C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\tr\Microsoft.CodeA
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\grzyby-blazor.sourcelink.json
-C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\compressed\v7qf34hr84-{0}-mx7nqghwau-mx7nqghwau.gz
+C:\Users\Marek\Desktop\grzyby\grzyby-blazor\obj\Debug\net10.0\compressed\v7qf34hr84-{0}-thwlysh838-thwlysh838.gz
+C:\Users\Marek\Desktop\grzyby\grzyby-blazor\bin\Debug\net10.0\appsettings.Hosting.json

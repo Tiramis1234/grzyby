@@ -12,38 +12,45 @@
 
 <PageTitle>Nowy Wpis</PageTitle>
 
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="card border-0 shadow rounded-4 p-4 p-md-5 bg-white">
-                <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                    <span class="fs-2 me-3">📝</span>
-                    <h2 class="fw-bold mb-0 text-chocolate">Utwórz nowy wpis</h2>
+<div class="main-wrap" style="grid-template-columns:1fr; max-width:680px;">
+    <main>
+        <div class="mb-3">
+            <a href="/forum" class="btn-ghost" style="display:inline-flex;">
+                <i class="bi bi-arrow-left"></i> Wróć do forum
+            </a>
+        </div>
+
+        <div style="background:var(--cr); border:1px solid var(--cf); border-radius:8px; padding:28px;">
+            <div style="margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--cf);">
+                <h2 style="font-family:var(--fs); font-size:1.3rem; font-weight:600; color:var(--cb); margin:0;">
+                    <i class="bi bi-pencil-square" style="color:var(--ccl); margin-right:8px;"></i>Utwórz nowy wpis
+                </h2>
+            </div>
+
+            <EditForm Model="Input" method="post" FormName="NowyWpisForm" OnValidSubmit="DodajWpis">
+                <DataAnnotationsValidator />
+
+                <div class="mb-4">
+                    <label style="font-weight:600; font-size:0.82rem; color:var(--cud); display:block; margin-bottom:6px;">Tytuł wpisu</label>
+                    <InputText @bind-Value="Input.Tytul" class="form-control border-0 p-3" style="background:var(--cp); font-size:0.95rem;" placeholder="Zaciekaw innych swoim tytułem..." />
+                    <ValidationMessage For="() => Input.Tytul" class="text-danger small mt-2 fw-bold" />
                 </div>
 
-                <EditForm Model="Input" method="post" FormName="NowyWpisForm" OnValidSubmit="DodajWpis">
-                    <DataAnnotationsValidator />
+                <div class="mb-5">
+                    <label style="font-weight:600; font-size:0.82rem; color:var(--cud); display:block; margin-bottom:6px;">Treść</label>
+                    <InputTextArea @bind-Value="Input.Tresc" class="form-control border-0 p-3" rows="10" style="background:var(--cp); font-size:0.95rem;" placeholder="Rozpisz się tutaj... Podziel się relacją z grzybobrania lub zadaj pytanie." />
+                    <ValidationMessage For="() => Input.Tresc" class="text-danger small mt-2 fw-bold" />
+                </div>
 
-                    <div class="mb-4">
-                        <label class="form-label text-chocolate fw-bold">Tytuł wpisu</label>
-                        <InputText @bind-Value="Input.Tytul" class="form-control form-control-lg bg-light border-0 p-3" placeholder="Zaciekaw innych swoim tytułem..." />
-                        <ValidationMessage For="() => Input.Tytul" class="text-danger small mt-2 fw-bold" />
-                    </div>
-
-                    <div class="mb-5">
-                        <label class="form-label text-chocolate fw-bold">Treść</label>
-                        <InputTextArea @bind-Value="Input.Tresc" class="form-control bg-light border-0 p-3" rows="10" placeholder="Rozpisz się tutaj... Podziel się relacją z grzybobrania lub zadaj pytanie." />
-                        <ValidationMessage For="() => Input.Tresc" class="text-danger small mt-2 fw-bold" />
-                    </div>
-
-                    <div class="d-flex justify-content-end align-items-center gap-3 mt-4 pt-3 border-top">
-                        <a href="/forum" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-caramel">Anuluj</a>
-                        <button type="submit" class="btn bg-forest rounded-pill px-5 py-2 fw-bold shadow-sm transition-hover">Opublikuj na forum</button>
-                    </div>
-                </EditForm>
-            </div>
+                <div class="d-flex justify-content-end align-items-center gap-3 pt-3 border-top" style="border-color:var(--cf) !important;">
+                    <a href="/forum" class="btn-ghost">Anuluj</a>
+                    <button type="submit" class="btn-primary-custom" style="border:none;">
+                        <i class="bi bi-send"></i> Opublikuj na forum
+                    </button>
+                </div>
+            </EditForm>
         </div>
-    </div>
+    </main>
 </div>
 
 @code {

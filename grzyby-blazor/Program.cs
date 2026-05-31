@@ -40,6 +40,13 @@ builder.Services.AddIdentityCore<User>(options =>
 
 var app = builder.Build();
 
+// Automatyczna migracja i seed bazy danych (ważne dla SQLite w dev)
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+}
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);

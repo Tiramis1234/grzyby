@@ -1,53 +1,32 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using grzyby.Models
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
-    <div class="container">
-        <a class="navbar-brand fw-bold text-forest" href="">Forum Grzybów 🍄</a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="nav">
+    <a class="logo" href="">
+        <span class="logo-dot"></span>Atlas Grzybów
+    </a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Linki z lewej strony -->
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item px-2">
-                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
-                </li>
-                <li class="nav-item px-2">
-                    <NavLink class="nav-link" href="wiki">Wiki</NavLink>
-                </li>
-                <li class="nav-item px-2">
-                    <NavLink class="nav-link" href="forum">Forum</NavLink>
-                </li>
-            </ul>
+    <div class="nav-links">
+        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
+        <NavLink class="nav-link" href="wiki">Wiki</NavLink>
+        <NavLink class="nav-link" href="forum">Forum</NavLink>
+    </div>
 
-            <!-- Prawa strona -->
-            <ul class="navbar-nav ms-auto align-items-center">
-                <AuthorizeView>
-                    <Authorized>
-                        <li class="nav-item px-2">
-                            <span class="nav-link text-muted">Zalogowano jako <strong class="text-chocolate">@context.User.Identity?.Name</strong></span>
-                        </li>
-                        <li class="nav-item ms-lg-3">
-                            <form action="/logout" method="post" class="d-inline">
-                                <AntiforgeryToken />
-                                <button type="submit" class="btn border-chocolate text-chocolate rounded-pill px-4 transition-hover">Wyloguj</button>
-                            </form>
-                        </li>
-                    </Authorized>
-                    
-                    <NotAuthorized>
-                        <li class="nav-item px-2">
-                            <NavLink class="nav-link fw-bold text-chocolate" href="login">Zaloguj</NavLink>
-                        </li>
-                        <li class="nav-item ms-lg-3">
-                            <a class="btn bg-forest rounded-pill px-4 transition-hover" href="register">Rejestracja</a>
-                        </li>
-                    </NotAuthorized>
-                </AuthorizeView>
-            </ul>
-        </div>
+    <div class="nav-right">
+        <AuthorizeView>
+            <Authorized>
+                <span class="btn-sm" style="color:var(--cu); font-family:var(--fm); font-size:0.62rem;">
+                    @context.User.Identity?.Name
+                </span>
+                <form action="/logout" method="post" class="d-inline">
+                    <AntiforgeryToken />
+                    <button type="submit" class="btn-sm btn-outline">Wyloguj</button>
+                </form>
+            </Authorized>
+            <NotAuthorized>
+                <a class="btn-sm btn-outline" href="login">Zaloguj</a>
+                <a class="btn-sm btn-dark-custom" href="register">Rejestracja</a>
+            </NotAuthorized>
+        </AuthorizeView>
     </div>
 </nav>
